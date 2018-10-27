@@ -33,3 +33,7 @@ Ruby on Rails 5.1.6
 ## 画面ワイヤーフレーム
 <https://docs.google.com/spreadsheets/d/1Sj7FLwvWR7YvEor_siXszvIm3CV74QlgJzpqkKhCRC0/edit#gid=1909420042>
 ## 使用予定Gem
+  * devise
+  * kaminari
+  * Chartkick
+  * rubocop
