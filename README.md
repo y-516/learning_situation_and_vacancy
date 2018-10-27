@@ -25,6 +25,7 @@ Ruby on Rails 5.1.6
 * フォロー機能
   * ユーザー同士はフォロー(繋がる)ことでお互いの詳細を見ることができる
 ## カタログ設計
+ <https://docs.google.com/spreadsheets/d/1IY-Ku50ZiqZGCY4BsnWYU1wnFBcqfVg1mPvgu9SgjlE/edit#gid=0>
 ## テーブル定義
 ## 画面遷移図
 ## 画面ワイヤーフレーム
