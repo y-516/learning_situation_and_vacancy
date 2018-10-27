@@ -25,13 +25,13 @@ Ruby on Rails 5.1.6
 * フォロー機能
   * ユーザー同士はフォロー(繋がる)ことでお互いの詳細を見ることができる
 ## カタログ設計
- <https://docs.google.com/spreadsheets/d/14EyJdUlNyTQlV2qL4VBPnFlRyxFX5048dP3Dxp5EsPo/edit#gid=0>
+ <https://docs.google.com/spreadsheets/d/18D_A9ykGz5RmSLJcx0Pu7qoXvDgDNa_5FyKo-6OkU1A/edit?usp=sharing>
 ## テーブル定義
-<https://docs.google.com/spreadsheets/d/14EyJdUlNyTQlV2qL4VBPnFlRyxFX5048dP3Dxp5EsPo/edit#gid=0>
+<https://docs.google.com/spreadsheets/d/14EyJdUlNyTQlV2qL4VBPnFlRyxFX5048dP3Dxp5EsPo/edit?usp=sharing>
 ## 画面遷移図
-<https://docs.google.com/spreadsheets/d/1n6UI_q4t8l4eQ8kqdAoutbU4Q56RhH4FgpLJECJ88is/edit#gid=0>
+<https://docs.google.com/spreadsheets/d/1n6UI_q4t8l4eQ8kqdAoutbU4Q56RhH4FgpLJECJ88is/edit?usp=sharing>
 ## 画面ワイヤーフレーム
-<https://docs.google.com/spreadsheets/d/1Sj7FLwvWR7YvEor_siXszvIm3CV74QlgJzpqkKhCRC0/edit#gid=1909420042>
+<https://docs.google.com/spreadsheets/d/1Sj7FLwvWR7YvEor_siXszvIm3CV74QlgJzpqkKhCRC0/edit?usp=sharing>
 ## 使用予定Gem
   * devise
   * kaminari
