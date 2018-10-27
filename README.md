@@ -5,8 +5,7 @@
 ## コンセプト
 無駄な時間を減らすこと
 ## バージョン
-Ruby 2.3.1
-Ruby on Rails 5.1.6
+Ruby 2.3.1  Ruby on Rails 5.1.6  
 
 * Ruby version
 
