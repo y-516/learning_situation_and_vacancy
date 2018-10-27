@@ -1,9 +1,9 @@
 # README
-#学習状況と空席確認アプリ
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 学習状況と空席確認アプリ
+##　概要
+オフィスで勉強中の学習者の学習内容と空席状況をリアルタイムで確認できます。
 
-Things you may want to cover:
+
 
 * Ruby version
 
