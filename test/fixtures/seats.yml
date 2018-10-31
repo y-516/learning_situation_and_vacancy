@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  learning_time: 2018-10-29 23:35:30
+  state: 1
+
+two:
+  learning_time: 2018-10-29 23:35:30
+  state: 1

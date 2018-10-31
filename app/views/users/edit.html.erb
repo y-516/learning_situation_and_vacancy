@@ -1,0 +1,16 @@
+<%=form_with(model:@user,local:true) do |f|%>
+<%=f.label:名前%>
+<%=f.text_field:name%>
+<%=f.label:メールアドレス%>
+<%=f.text_field:email%>
+<%=f.label:学習内容%>
+<%=f.text_area:curriculum%>
+<%=f.label:学習目標%>
+<%=f.text_area:learning_goal%>
+<%=f.label:知識%>
+<%=f.text_area:ability%>
+<%=f.label:プロジェクト%>
+<%=f.text_field:project%>
+
+<%=f.submit:プロフィールを更新%>
+<%end%>
