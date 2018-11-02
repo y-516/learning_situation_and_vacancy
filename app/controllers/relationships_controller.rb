@@ -1,4 +1,4 @@
-class RelatioshipsController < ApplicationController
+class RelationshipsController < ApplicationController
   before_action :authenticate_user!
    respond_to? :js
    def create
