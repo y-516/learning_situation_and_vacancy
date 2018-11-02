@@ -1,6 +1,6 @@
 class LearnersController < ApplicationController
   def index
-    @learner_all=User.where(position:0)
+    @learner_all=User.where.not(id:current_user.id).where(position:0)
   end
 
   def show
