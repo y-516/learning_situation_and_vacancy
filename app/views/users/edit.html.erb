@@ -11,6 +11,10 @@
 <%=f.text_area:ability%>
 <%=f.label:プロジェクト%>
 <%=f.text_field:project%>
+<%=f.label:役職%>
+<%=f.select:position,[['一般',0],['リーダー',1]]%>
+<%=f.label:画像%>
+<%=f.file_field:image%>
 
 <%=f.submit:プロフィールを更新%>
 <%end%>

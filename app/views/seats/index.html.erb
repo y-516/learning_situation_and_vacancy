@@ -1,1 +1,49 @@
 <h1>座席状況一覧表示画面</h1>
+
+<h2>全席数:<%=$number_or_chairs%>席</h2>
+<h2>着席数:<%=@study_count%>席</h2>
+<h2>空席数:<%=$number_or_chairs-@study_count%>席</h2>
+
+<% if flash[:error].present? %>
+    <ul>
+      <% flash[:error].each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<table>
+  <tr>
+    <th>席状況</th>
+    <th>着席/帰宅</th>
+    <th>名前</th>
+    <th>役職</th>
+    <th>詳細</th>
+    <th>学習終了時間</th>
+  </tr>
+
+  <tr>
+    <%@study.each do |study|%>
+      <td>着席済み</td>
+      <td><%=link_to '帰宅',seat_path(study.id),method: :delete%></td>
+      <td><%=study.user.name%></td>
+      <td>
+        <%if study.user.position == 0 %>
+         一般
+         <%else%>
+         リーダー
+         <%end%>
+      </td>
+      <td>
+        <%if study.user.position == 0 %>
+        <%=link_to '詳細',learner_path(study.user.id)%>
+        <%else%>
+        <%=link_to '詳細',reader_path(study.user.id)%>
+        <%end%>
+      </td>
+      <td><%=template_change_learning_done(study.learning_done)%></td>
+  </tr>
+    <%end%>
+  </table>

@@ -5,6 +5,8 @@
 <p>学習内容:<%=@current_user.curriculum%></p>
 <p>学習目標:<%=@current_user.learning_goal%></p>
 <p>知識:<%=@current_user.ability%></p>
-<p>プロジェクト:<%=@current_user.project%></p>
+<p>配属プロジェクト:<%=@current_user.project%></p>
+<p>役職:<%=positioncolumn_change_number_to_string(@current_user.position)%></p>
+<p>画像:<%=image_tag @current_user.image%></p>
 <p><%=link_to "#{@current_user.name}のフォロー中学習者一覧画面",relationships_path %></p>
 <p><%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%></p>
