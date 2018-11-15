@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181031071724) do
+ActiveRecord::Schema.define(version: 20181112121707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,10 +26,13 @@ ActiveRecord::Schema.define(version: 20181031071724) do
   end
 
   create_table "seats", force: :cascade do |t|
-    t.time "learning_time"
-    t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "office"
+    t.bigint "user_id"
+    t.datetime "learning_start"
+    t.datetime "learning_done"
+    t.index ["user_id"], name: "index_seats_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,9 +50,10 @@ ActiveRecord::Schema.define(version: 20181031071724) do
     t.string "project"
     t.integer "position"
     t.boolean "admin"
-    t.string "image"
+    t.text "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "seats", "users"
 end

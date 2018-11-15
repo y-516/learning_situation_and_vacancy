@@ -13,4 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery/dist/jquery.js
+//= require easytimer.js/dist/easytimer.js
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
