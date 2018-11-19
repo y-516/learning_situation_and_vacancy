@@ -1,22 +1,11 @@
 <h1>座席状況一覧表示画面</h1>
-<<<<<<< HEAD
-<h1>test</h1>
-=======
-
->>>>>>> origin/master
-<h2>全席数:<%=$number_or_chairs%>席</h2>
-<h2>着席数:<%=@study_count%>席</h2>
-<h2>空席数:<%=$number_or_chairs-@study_count%>席</h2>
-
-<% if flash[:error].present? %>
-    <ul>
-      <% flash[:error].each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
+<h2><%=notice%></h2>
+<%if AllSeat.first.try(:number_of_seats)%>
+<h2>全席数:<%=@all_seat%>席</h2>
+<h2>着席数:<%=@all_seat_count%>席</h2>
+<h2>空席数:<%=@all_seat-@all_seat_count%>席</h2>
+<%vacancy = @all_seat-@all_seat_count%>
+<%end%>
 
 <table>
   <tr>
@@ -29,25 +18,41 @@
   </tr>
 
   <tr>
-    <%@study.each do |study|%>
+    <%@student_under_study.each do |student_under_study|%>
       <td>着席済み</td>
-      <td><%=link_to '帰宅',seat_path(study.id),method: :delete%></td>
-      <td><%=study.user.name%></td>
+      <%if current_user.id == student_under_study.user.id%>
+      <td><%=link_to '帰宅',seat_path(student_under_study.id),method: :delete,data:{confirm:"離席します。よろしいですか？"}%></td>
+      <%else%>
+      <td>着席中</td>
+      <%end%>
+      <td><%=student_under_study.user.name%></td>
       <td>
-        <%if study.user.position == 0 %>
+        <%if student_under_study.user.position == 0 %>
          一般
          <%else%>
          リーダー
          <%end%>
       </td>
       <td>
-        <%if study.user.position == 0 %>
-        <%=link_to '詳細',learner_path(study.user.id)%>
+        <%if student_under_study.user.position == 0 %>
+        <%=link_to '詳細',learner_path(student_under_study.user.id)%>
         <%else%>
-        <%=link_to '詳細',reader_path(study.user.id)%>
+        <%=link_to '詳細',reader_path(student_under_study.user.id)%>
         <%end%>
       </td>
-      <td><%=template_change_learning_done(study.learning_done)%></td>
+      <td><%=template_change_learning_done(student_under_study.learning_done)%></td>
   </tr>
     <%end%>
   </table>
+
+
+<%if AllSeat.first.try(:number_of_seats)%>
+  <table>
+    <tr>
+      <%vacancy.times do%>
+      <td>空席</td>
+      <td><%=link_to '着席',new_learning_time_path%></td>
+    </tr>
+      <%end%>
+    </table>
+<%end%>

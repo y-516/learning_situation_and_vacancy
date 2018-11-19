@@ -1,0 +1,13 @@
+<h1>座席数入力画面</h1>
+<p><%=notice%></p>
+
+<% if AllSeat.first == nil%>
+<%=form_with(model:@allseat , url:all_seats_path, local:true) do |f|%>
+  <%= f.text_field:number_of_seats%>
+  <%= f.submit '登録'%>
+<%end%>
+ <%else%>
+<% if AllSeat.first.try(:number_of_seats)%>
+<%= link_to '座席数を変更する',edit_all_seat_path(AllSeat.first.id)%>
+<%end%>
+<%end%>

@@ -1,32 +1,20 @@
 class SeatsController < ApplicationController
-  # def index
-  #   time = Seat.select("id", "learning_done")
-  #   gon.learning = time
-  #   @count = Seat.count
-  #   @study = User.where.not(seat_id: nil)
-  # end
-
   def index
-    @study = Seat.where("learning_done >= ?", DateTime.now)
-    @timeup = Seat.where("learning_done <= ?", DateTime.now)
-    @timeup.delete_all
-    @study_count = Seat.count
-  end
-
-  def new
-  end
-
-  def create
-    number_or_chairs = params[:num]
-    $number_or_chairs = number_or_chairs.to_i
-    redirect_to seats_path
+    @student_under_study = Seat.where("learning_done >= ?", DateTime.now)
+    # @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
+    # @time_up_learning_done.delete_all
+    @all_seat_count = Seat.count
+    all_seat = AllSeat.first
+    @all_seat = all_seat.number_of_seats.to_i
+    # if AllSeat.first.try(:number_of_seats)
+    # all_seat = AllSeat.first
+    # @all_seat = all_seat.number_of_seats.to_i
+    # $number_or_chairs = @all_seat
   end
 
   def destroy
     @seat = Seat.find(params[:id])
     @seat.destroy
-    redirect_to seats_path
+    redirect_to seats_path,notice:"お疲れ様でした"
   end
-
-
 end

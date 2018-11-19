@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+.real_time{
+  height :30px;
+  width :400px;
+  background-color: #DDDDDD;
+}
