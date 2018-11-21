@@ -1,8 +1,8 @@
 class SeatsController < ApplicationController
   def index
     @student_under_study = Seat.where("learning_done >= ?", DateTime.now)
-    # @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
-    # @time_up_learning_done.delete_all
+    @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
+    @time_up_learning_done.delete_all
     @all_seat_count = Seat.count
       if AllSeat.first.try(:number_of_seats)
       all_seat = AllSeat.first

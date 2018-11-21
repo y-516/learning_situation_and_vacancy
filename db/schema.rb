@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181117075932) do
+ActiveRecord::Schema.define(version: 20181120040358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20181117075932) do
     t.string "learning_goal"
     t.string "ability"
     t.string "project"
-    t.integer "position"
+    t.integer "position", default: 0
     t.boolean "admin", default: false
     t.text "image"
     t.index ["email"], name: "index_users_on_email", unique: true

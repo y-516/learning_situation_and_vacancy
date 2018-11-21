@@ -1,4 +1,5 @@
 class AllSeatsController < ApplicationController
+  before_action:leader_check,only:[:new]
   def new
   end
 
@@ -30,5 +31,12 @@ class AllSeatsController < ApplicationController
 
   def all_seat_params
     params.require(:all_seat).permit(:number_of_seats)
+  end
+
+  def leader_check
+    leader_check = User.find(current_user.id)
+    if leader_check.position == 0
+      redirect_to seats_path,notice:"一般ユーザーは席数を変更できません"
+    end
   end
 end

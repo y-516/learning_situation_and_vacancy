@@ -3,7 +3,7 @@
 
 <% if AllSeat.first == nil%>
 <%=form_with(model:@allseat , url:all_seats_path, local:true) do |f|%>
-  <%= f.number_field:number_of_seats,in:0...31%>
+  <%= f.number_field:number_of_seats,:min=>1%>
   <%= f.submit '登録'%>
 <%end%>
  <%else%>
