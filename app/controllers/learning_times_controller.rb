@@ -1,6 +1,5 @@
 class LearningTimesController < ApplicationController
   before_action :seating_confirmation,only:[:new]
-  require "date"
 
   def new
     @seat =Seat.new
@@ -11,10 +10,8 @@ class LearningTimesController < ApplicationController
 
   def create
     @seat = Seat.new(time_params)
-    # @seat.learning_start = DateTime.now
     @current_user = User.find(current_user.id)
     @seat.user_id = @current_user.id
-
     if @seat.save
       redirect_to seats_path,notice:"着席しました"
     else
