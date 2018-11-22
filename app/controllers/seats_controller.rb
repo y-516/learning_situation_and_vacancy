@@ -1,4 +1,5 @@
 class SeatsController < ApplicationController
+  require 'date'
   def index
     @student_under_study = Seat.where("learning_done >= ?", DateTime.now)
     @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
@@ -8,10 +9,6 @@ class SeatsController < ApplicationController
       all_seat = AllSeat.first
       @all_seat = all_seat.number_of_seats.to_i
       end
-    # if AllSeat.first.try(:number_of_seats)
-    # all_seat = AllSeat.first
-    # @all_seat = all_seat.number_of_seats.to_i
-    # $number_or_chairs = @all_seat
   end
 
   def destroy

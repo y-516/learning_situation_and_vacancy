@@ -20,14 +20,6 @@ class LearningTimesController < ApplicationController
     else
       redirect_to new_learning_time_path,flash: { error: @seat.errors.full_messages }
     end
-
-    # if @seat.save
-    #   redirect_to seats_path,notice:"着席しました"
-    # elsif Seat.where(user_id:@current_user.id)
-    #   redirect_to seats_path,notice:"#{@current_user.name}は既に着席しています"
-    # else
-    #   redirect_to seats_path,notice:"eles処理"
-    # end
   end
 end
 
@@ -44,14 +36,3 @@ def seating_confirmation
     redirect_to seats_path,notice:"既に着席しています"
   end
 end
-
-
-# def learning_time(ending_time)
-#   now_time = Time.now
-#   difference = ending_time-now_time
-#   return Time.at(difference).utc.strftime("時間の差は %H時 %M分 %S秒")
-# end
-
-# def new
-#   gon.test=Time.local(2018,11,06,20,25)
-# end

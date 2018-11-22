@@ -1,5 +1,5 @@
 class AllSeatsController < ApplicationController
-  before_action:leader_check,only:[:new]
+  before_action:leader_check,only:[:edit,:update]
   def new
   end
 
@@ -11,11 +11,11 @@ class AllSeatsController < ApplicationController
     redirect_to seats_path
   end
 
-  # def destroy
-  #   @allseat = AllSeat.find(params[:id])
-  #   @allseat.destroy
-  #   redirect_to new_all_seat_path,notice:"全席数を削除しました"
-  # end
+  def destroy
+    @allseat = AllSeat.find(params[:id])
+    @allseat.destroy
+    redirect_to new_all_seat_path,notice:"座席数をリセットしました"
+  end
 
   def edit
     @allseat = AllSeat.find(params[:id])
@@ -24,7 +24,7 @@ class AllSeatsController < ApplicationController
   def update
     @allseat = AllSeat.find(AllSeat.first.id)
     @allseat.update(all_seat_params)
-     redirect_to new_all_seat_path, notice: "席数を変更しました"
+     redirect_to new_all_seat_path, notice: "座席数を変更しました"
   end
 
   private

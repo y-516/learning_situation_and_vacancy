@@ -15,5 +15,7 @@
 //= require jquery/dist/jquery.js
 //= require easytimer.js/dist/easytimer.js
 //= require jquery
+//= require Chart.bundle
+//= require chartkick
 //= require jquery_ujs
 //= require_tree .
