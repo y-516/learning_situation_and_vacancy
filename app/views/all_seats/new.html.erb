@@ -1,21 +1,12 @@
 <h1>座席数入力画面</h1>
-<h2><%=notice%></h2>
-
-<%if current_user.position == 1%>
+<% if current_user.position == 1%>
   <% if AllSeat.first == nil%>
-    <%=form_with(model:@allseat , url:all_seats_path, local:true) do |f|%>
-      <span>オフィスの座席数は</span>
-      <%= f.number_field:number_of_seats,:min=>1%>
-      <span>席</span>
-      <p><%= f.submit '登録'%></p>
-      <%end%>
-      <%else%>
-    <% if AllSeat.first.try(:number_of_seats)%>
-    <%= link_to '座席数を変更する',edit_all_seat_path(AllSeat.first.id)%>
-    <%= link_to '座席数をリセットする',all_seat_path(AllSeat.first.id),method: :delete,data:{confirm:"座席数をリセットします。よろしいですか？"}%>
-
-    <%end%>
+    <%= render 'form' %>
   <%end%>
-  <%else%>
+        <% if AllSeat.first.try(:number_of_seats)%>
+          <%= link_to '座席数を変更する',edit_all_seat_path(AllSeat.first.id)%>
+          <%= link_to '座席数をリセットする',all_seat_path(AllSeat.first.id),method: :delete,data:{confirm:"座席数をリセットします。よろしいですか？"}%>
+        <%end%>
+<%else%>
   <p>座席数は権限のあるユーザーが決定します</p>
-  <%end%>
+<%end%>

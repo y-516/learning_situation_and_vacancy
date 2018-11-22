@@ -1,28 +1,24 @@
 class AllSeatsController < ApplicationController
   before_action:leader_check,only:[:edit,:update]
+  before_action:set_all_seat,only:[:edit,:update,:destroy]
   def new
+    @allseat = AllSeat.new
   end
 
   def create
-    @allseat =AllSeat.new
-    @seats = params[:number_of_seats]
-    @allseat.number_of_seats = @seats
-    @allseat.save
+    AllSeat.create(all_seat_params)
     redirect_to seats_path
   end
 
   def destroy
-    @allseat = AllSeat.find(params[:id])
     @allseat.destroy
     redirect_to new_all_seat_path,notice:"座席数をリセットしました"
   end
 
   def edit
-    @allseat = AllSeat.find(params[:id])
   end
 
   def update
-    @allseat = AllSeat.find(AllSeat.first.id)
     @allseat.update(all_seat_params)
      redirect_to new_all_seat_path, notice: "座席数を変更しました"
   end
@@ -38,5 +34,9 @@ class AllSeatsController < ApplicationController
     if leader_check.position == 0
       redirect_to seats_path,notice:"一般ユーザーは席数を変更できません"
     end
+  end
+
+  def set_all_seat
+    @allseat = AllSeat.find(params[:id])
   end
 end

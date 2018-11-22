@@ -2,7 +2,7 @@
 <html>
   <head>
 
-    <title>LearningSituationAndVacancy</title>
+    <title>学習状況と空席確認アプリ</title>
     <script
           src="https://code.jquery.com/jquery-2.2.4.min.js"
           integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -11,9 +11,6 @@
     <%= include_gon %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "application", "chartkick" %>
-    <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
-
 
   </head>
   <body>
@@ -29,6 +26,13 @@
     <%= link_to "新規登録", new_user_registration_path %>
     <%= link_to "ログイン", new_user_session_path %>
     <%end%>
+    <h2><%=notice%></h2>
+    <% if flash[:error].present? %>
+          <% flash[:error].each do |message| %>
+            <h2><%= message%></h2>
+          <% end %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

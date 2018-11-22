@@ -1,13 +1,5 @@
 <h1>学習終了予定時刻入力画面</h1>
 <h2>学習終了予定時刻を入力すること</h2>
-<% if flash[:error].present? %>
-      <% flash[:error].each do |message| %>
-        <h2><%= message%></h2>
-      <% end %>
-  </div>
-<% end %>
-
-
 <%=form_with(model:@seat , url: learning_times_path,local:true) do |f|%>
   <%= f.datetime_select:learning_done,
   :minute_step => 15%>

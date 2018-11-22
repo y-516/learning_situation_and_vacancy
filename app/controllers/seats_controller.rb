@@ -1,7 +1,7 @@
 class SeatsController < ApplicationController
   require 'date'
   def index
-    @student_under_study = Seat.where("learning_done >= ?", DateTime.now)
+    @student_under_study = Seat.where("learning_done >= ?", DateTime.now).order('learning_done DESC')
     @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
     @time_up_learning_done.delete_all
     @all_seat_count = Seat.count

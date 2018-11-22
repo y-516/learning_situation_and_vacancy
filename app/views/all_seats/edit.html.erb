@@ -1,5 +1,2 @@
 <h1>座席数編集画面</h1>
-<%=form_with(model:@allseat , url:all_seat_path, local:true) do |f|%>
-  <%= f.number_field:number_of_seats,:min=>1%>
-  <%= f.submit '登録'%>
-<%end%>
+<%= render 'form' %>
