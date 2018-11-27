@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181127080749) do
+ActiveRecord::Schema.define(version: 20181127091322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "all_seats", force: :cascade do |t|
-    t.string "number_of_seats", default: "0"
+    t.string "number_of_seats", default: "0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20181127080749) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.datetime "learning_done"
+    t.datetime "learning_done", null: false
     t.index ["user_id"], name: "index_seats_on_user_id"
   end
 
@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(version: 20181127080749) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "curriculum"
-    t.string "learning_goal"
-    t.string "ability"
-    t.string "project"
+    t.string "name", default: "氏名記入", null: false
+    t.string "curriculum", default: "学習内容記入", null: false
+    t.string "learning_goal", default: "学習目標記入", null: false
+    t.string "ability", default: "学習内容記入", null: false
+    t.string "project", default: "稼働案件状況記入", null: false
     t.integer "position", default: 0
-    t.boolean "admin", default: false
+    t.boolean "admin", default: false, null: false
     t.text "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
