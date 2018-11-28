@@ -10,7 +10,13 @@ class User < ApplicationRecord
   has_many:followers,through: :passive_relationships,source: :follower
   has_many :seat
   mount_uploader :image, ImageUploader
-  validates :name,presence:true
+  validates :name,presence:true,length: { maximum: 30 }
+  validates :email ,length: { maximum: 255 }
+  validates :curriculum,length:{ maximum: 255 }
+  validates :learning_goal,length:{ maximum: 255 }
+  validates :ability,length:{ maximum: 255 }
+  validates :project,length:{ maximum: 255 }
+
 
   def follow!(other_user)
   active_relationships.create!(followed_id: other_user.id)

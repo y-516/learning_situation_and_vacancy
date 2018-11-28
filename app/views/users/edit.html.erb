@@ -1,3 +1,7 @@
+<% @user.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+
 <%=form_with(model:@user,local:true) do |f|%>
 <%=f.label:名前%>
 <%=f.text_field:name%>
@@ -7,9 +11,9 @@
 <%=f.text_area:curriculum%>
 <%=f.label:学習目標%>
 <%=f.text_area:learning_goal%>
-<%=f.label:知識%>
+<%=f.label:得意分野%>
 <%=f.text_area:ability%>
-<%=f.label:プロジェクト%>
+<%=f.label:配属プロジェクト%>
 <%=f.text_field:project%>
 <%=f.label:役職%>
 <%=f.select:position,[['一般',0],['リーダー',1]]%>

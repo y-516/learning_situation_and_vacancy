@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード再入力
+        curriculum: 学習内容
+        learning_goal: 学習目標
+        ability: 得意分野
+        project: 配属プロジェクト
+        position: 役職
+        admin: 権限
+        image: 画像
