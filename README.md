@@ -35,5 +35,7 @@ Ruby on Rails 5.1.6
 ## 使用予定Gem
   * devise
   * kaminari
-  * Chartkick
+  * carrierwave
   * rubocop
+  * mini_magick
+  * cancancan
