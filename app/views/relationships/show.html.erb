@@ -1,8 +1,16 @@
-<h1>フォロー中学習者詳細</h1>
- <p>名前:<%=@relationship_show.name%></p>
- <p>学習内容:<%=@relationship_show.curriculum%></p>
- <p>学習目標:<%=@relationship_show.learning_goal%></p>
- <p>知識:<%=@relationship_show.ability%></p>
- <p>配属プロジェクト:<%=@relationship_show.project%></p>
- <p>役職:<%=positioncolumn_change_number_to_string(@relationship_show.position)%></p>
- <p>画像:<%=image_tag @relationship_show.image%></p>
+<div class="relationship_show_out">
+  <h1>フォロー中学習者詳細</h1>
+  <p><%=image_tag @relationship_show.image%></p>
+  <p>名前</p>
+  <p><%=@relationship_show.name%></p>
+  <p class="relationship_show_word-wrap">役職</p>
+  <p><%=positioncolumn_change_number_to_string(@relationship_show.position)%></p>
+  <p>学習内容</p>
+  <p class="relationship_show_word-wrap"><%=@relationship_show.curriculum%></p>
+  <p>学習目標</p>
+  <p class="relationship_show_word-wrap"><%=@relationship_show.learning_goal%></p>
+  <p>得意分野</p>
+  <p class="relationship_show_word-wrap"><%=@relationship_show.ability%></p>
+  <p>配属プロジェクト</p>
+  <p class="relationship_show_word-wrap"><%=@relationship_show.project%></p>
+</div>

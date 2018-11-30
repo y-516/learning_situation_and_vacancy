@@ -1,9 +1,15 @@
-<h1>全リーダー一覧画面</h1>
-  <table>
-    <tr>
-      <% @reader_all.each do |reader|%>
-      <td><%=reader.name%></td>
-      <td><%= link_to '詳細',reader_path(reader.id)%></td>
-    </tr>
-      <%end%>
-  </table>
+<div class ="reader_index_out">
+  <h1>全リーダー一覧画面</h1>
+  <div class ="reader_index_table">
+    <table>
+      <tr>
+        <% @reader_all.each do |reader|%>
+        <td><%=reader.name%></td>
+        <td><%= link_to '詳細',reader_path(reader.id)%></td>
+        <td><%=image_tag reader.image%></td>
+      </tr>
+        <%end%>
+    </table>
+  </div>
+    <%= paginate(@reader_all) %>
+</div>

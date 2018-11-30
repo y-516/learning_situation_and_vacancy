@@ -1,8 +1,17 @@
-<h1>学習者詳細画面</h1>
-<p>名前:<%=@learner_show.name%></p>
-<p>学習内容:<%=@learner_show.curriculum%></p>
-<p>学習目標:<%=@learner_show.learning_goal%></p>
-<p>知識:<%=@learner_show.ability%></p>
-<p>配属プロジェクト:<%=@learner_show.project%></p>
-<p>役職:<%=positioncolumn_change_number_to_string(@learner_show.position)%></p>
-<p>画像:<%=image_tag @learner_show.image%></p>
+<div class="learner_show_out">
+  <h1>学習者詳細画面</h1>
+  <p><%=image_tag @learner_show.image%></p>
+  <p>名前</p>
+  <p><%=@learner_show.name%></p>
+  <p>役職</p>
+  <p class="learner_show_word-wrap"><%=positioncolumn_change_number_to_string(@learner_show.position)%></p>
+  <p>学習内容</p>
+  <p class="learner_show_word-wrap"><%=@learner_show.curriculum%></p>
+  <p>学習目標</p>
+  <p class="learner_show_word-wrap"><%=@learner_show.learning_goal%></p>
+  <p>得意分野</p>
+  <p class="learner_show_word-wrap"><%=@learner_show.ability%></p>
+  <p>配属プロジェクト</p>
+  <p class="learner_show_word-wrap"><%=@learner_show.project%></p>
+
+<div>

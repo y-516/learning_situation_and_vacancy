@@ -1,11 +1,16 @@
-<h1>全学習者一覧画面</h1>
-<table>
-  <tr>
-    <% @learner_all.each do |learner|%>
-    <td><%= learner.name%></td>
-    <td><%=link_to '詳細',learner_path(learner.id)%></td>
-    <td><%= render 'follow_form', learner: learner %></td>
-  </tr>
-    <%end%>
-</table>
-<%= paginate(@learner_all) %>
+<div class ="learnser_index_out">
+  <h1>全学習者一覧画面</h1>
+  <div class ="learnser_index_table">
+    <table>
+      <tr>
+        <% @learner_all.each do |learner|%>
+        <td><%= learner.name%></td>
+        <td><%=link_to '詳細',learner_path(learner.id)%></td>
+        <td><%= render 'follow_form', learner: learner %></td>
+        <td><%=image_tag learner.image%></td>
+      </tr>
+        <%end%>
+    </table>
+  <%= paginate(@learner_all) %>
+  </div>
+</div>

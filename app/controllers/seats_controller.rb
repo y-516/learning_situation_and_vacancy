@@ -8,7 +8,9 @@ class SeatsController < ApplicationController
       if AllSeat.first.try(:number_of_seats)
       all_seat = AllSeat.first
       @all_seat = all_seat.number_of_seats.to_i
+      @vacancy = @all_seat-@all_seat_count
       end
+
   end
 
   def destroy

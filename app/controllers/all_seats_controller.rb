@@ -7,12 +7,12 @@ class AllSeatsController < ApplicationController
 
   def create
     AllSeat.create(all_seat_params)
-    redirect_to seats_path
+    redirect_to seats_path,notice:"全座席数を設定しました"
   end
 
   def destroy
     @allseat.destroy
-    redirect_to new_all_seat_path,notice:"座席数をリセットしました"
+    redirect_to new_all_seat_path,notice:"全座席数をリセットしました"
   end
 
   def edit
@@ -20,7 +20,7 @@ class AllSeatsController < ApplicationController
 
   def update
     @allseat.update(all_seat_params)
-     redirect_to new_all_seat_path, notice: "座席数を変更しました"
+     redirect_to new_all_seat_path, notice: "全座席数を変更しました"
   end
 
   private
@@ -32,7 +32,7 @@ class AllSeatsController < ApplicationController
   def leader_check
     leader_check = User.find(current_user.id)
     if leader_check.position == 0
-      redirect_to seats_path,notice:"一般ユーザーは席数を変更できません"
+      redirect_to seats_path,notice:"一般ユーザーは座席数を変更できません"
     end
   end
 

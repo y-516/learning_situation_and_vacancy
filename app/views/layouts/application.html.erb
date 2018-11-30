@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>学習状況と空席確認アプリ</title>
     <script
           src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -14,25 +14,35 @@
 
   </head>
   <body>
-    <h3 id ="real_time" class = "real_time"></h3>
-    <% if user_signed_in?%>
-    <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
-    <%= link_to "座席状況一覧表示画面",seats_path %>
-    <%= link_to "全リーダー一覧画面",readers_path %>
-    <%= link_to "全学習者一覧画面",learners_path %>
-    <%= link_to "座席数入力画面",new_all_seat_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <%else%>
-    <%= link_to "新規登録", new_user_registration_path %>
-    <%= link_to "ログイン", new_user_session_path %>
-    <%end%>
-    <h2><%=notice%></h2>
-    <% if flash[:error].present? %>
+    <header>
+      <nav>
+        <div class = "real_time">
+          <p id ="real_time"></p>
+        </div>
+        <div class = "header_url">
+          <% if user_signed_in?%>
+          <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
+          <%= link_to "座席状況一覧表示画面",seats_path %>
+          <%= link_to "全リーダー一覧画面",readers_path %>
+          <%= link_to "全学習者一覧画面",learners_path %>
+          <%= link_to "座席数入力画面",new_all_seat_path %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%else%>
+          <%= link_to "新規登録", new_user_registration_path %>
+          <%= link_to "ログイン", new_user_session_path %>
+          <%end%>
+        </div>
+      </nav>
+      <p class="meg"><%=notice%></p>
+    </header>
+
+    <div class ="message">
+        <% if flash[:error].present? %>
           <% flash[:error].each do |message| %>
-            <h2><%= message%></h2>
+            <%= message%>
           <% end %>
-      </div>
-    <% end %>
+        <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

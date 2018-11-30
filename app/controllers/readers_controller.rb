@@ -1,6 +1,6 @@
 class ReadersController < ApplicationController
   def index
-    @reader_all = User.where(position:1)
+    @reader_all = User.where(position:1).page(params[:page]).per(5)
   end
 
   def show

@@ -19,7 +19,7 @@ function showClock2() {
    var nowHour = set2fig( nowTime.getHours() );
    var nowMin  = set2fig( nowTime.getMinutes() );
    var nowSec  = set2fig( nowTime.getSeconds() );
-   var msg = "現時刻" +nowYear + "年" + nowMonth + "月" +nowDate + "日" + nowDay + "曜日" +nowHour + ":" + nowMin + ":" + nowSec;
+   var msg = nowYear + "年" + nowMonth + "月" +nowDate + "日" + nowDay + "曜日" +nowHour + ":" + nowMin + ":" + nowSec;
    document.getElementById("real_time").innerHTML = msg;
 }
 setInterval('showClock2()',1000);

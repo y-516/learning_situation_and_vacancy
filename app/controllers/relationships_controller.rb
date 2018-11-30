@@ -15,7 +15,7 @@ class RelationshipsController < ApplicationController
 
    def index
      user = User.find(current_user.id)
-     @relationshop_user = user.following
+     @relationshop_user = user.following.page(params[:page]).per(5)
    end
 
    def show

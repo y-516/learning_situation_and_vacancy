@@ -1,3 +1,52 @@
 // Place all the styles related to the learners controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.learnser_index_out{
+  color:white;
+  text-align: center;
+  font-size: 2rem;
+  width:1000px;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight: bold;
+  border: solid 3px #000000;
+  background-color: rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+}
+.learnser_index_table{
+  text-align: center;
+  height: 2200px;
+  width:800px;
+  font-weight: bold;
+  border: solid 3px #000000;
+  background-color: rgba(255,255,255,0.3);
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+}
+.learnser_index_table img{
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+}
+.learner_show_out{
+  color:white;
+  margin: auto;
+  font-size:1.5rem;
+  width:800px;
+  text-align: center;
+  font-weight: bold;
+  border: solid 3px #000000;
+  background-color: rgba(0,0,0,0.5);
+  margin-bottom:30px;
+}
+.learner_show_out img{
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+}
+p.learner_show_word-wrap{
+  padding: 10px;
+  word-wrap: break-word;
+}

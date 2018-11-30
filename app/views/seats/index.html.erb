@@ -1,57 +1,61 @@
-<h1>座席状況一覧表示画面</h1>
-<%if AllSeat.first.try(:number_of_seats)%>
-<h2>全席数:<%=@all_seat%>席</h2>
-<h2>着席数:<%=@all_seat_count%>席</h2>
-<h2>空席数:<%=@all_seat-@all_seat_count%>席</h2>
-<%vacancy = @all_seat-@all_seat_count%>
-<%end%>
-
-<table>
-  <tr>
-    <th>席状況</th>
-    <th>着席/帰宅</th>
-    <th>名前</th>
-    <th>役職</th>
-    <th>詳細</th>
-    <th>学習終了時間</th>
-  </tr>
-
-  <tr>
-    <%@student_under_study.each do |student_under_study|%>
-      <td>着席済み</td>
-      <%if current_user.id == student_under_study.user.id%>
-      <td><%=link_to '帰宅',seat_path(student_under_study.id),method: :delete,data:{confirm:"離席します。よろしいですか？"}%></td>
-      <%else%>
-      <td>着席中</td>
-      <%end%>
-      <td><%=student_under_study.user.name%></td>
-      <td>
-        <%if student_under_study.user.position == 0 %>
-         一般
-         <%else%>
-         リーダー
-         <%end%>
-      </td>
-      <td>
-        <%if student_under_study.user.position == 0 %>
-        <%=link_to '詳細',learner_path(student_under_study.user.id)%>
-        <%else%>
-        <%=link_to '詳細',reader_path(student_under_study.user.id)%>
-        <%end%>
-      </td>
-      <td><%=template_change_learning_done(student_under_study.learning_done)%></td>
-  </tr>
+<div class ="seat_index_out">
+  <div class ="seat_index">
+    <h1>座席状況一覧表示画面</h1>
+    <%if AllSeat.first.try(:number_of_seats)%>
+      <h2>全座席数:<%=@all_seat%>席</h2>
+      <h2>着席数:<%=@all_seat_count%>席</h2>
+      <h2>空席数:<%=@all_seat-@all_seat_count%>席</h2>
     <%end%>
-  </table>
+    <div class ="index_table">
+      <table>
+        <tr>
+          <th>席状況</th>
+          <th>着席/帰宅</th>
+          <th>名前</th>
+          <th>役職</th>
+          <th>詳細</th>
+          <th>学習終了予定時刻</th>
+        </tr>
+
+        <tr>
+          <%@student_under_study.each do |student_under_study|%>
+            <td>着席済み</td>
+            <%if current_user.id == student_under_study.user.id%>
+            <td><%=link_to '帰宅',seat_path(student_under_study.id),method: :delete,data:{confirm:"離席します。よろしいですか？"}%></td>
+            <%else%>
+            <td>着席中</td>
+            <%end%>
+            <td><%=student_under_study.user.name%></td>
+            <td>
+              <%if student_under_study.user.position == 0 %>
+               一般
+               <%else%>
+               リーダー
+               <%end%>
+            </td>
+            <td>
+              <%if student_under_study.user.position == 0 %>
+              <%=link_to '詳細',learner_path(student_under_study.user.id)%>
+              <%else%>
+              <%=link_to '詳細',reader_path(student_under_study.user.id)%>
+              <%end%>
+            </td>
+            <td><%=template_change_learning_done(student_under_study.learning_done)%></td>
+        </tr>
+          <%end%>
+        </table>
 
 
-<%if AllSeat.first.try(:number_of_seats)%>
-  <table>
-    <tr>
-      <%vacancy.times do%>
-      <td>空席</td>
-      <td><%=link_to '着席',new_learning_time_path%></td>
-    </tr>
+      <%if AllSeat.first.try(:number_of_seats)%>
+        <table>
+          <tr>
+            <%@vacancy.times do%>
+            <td>空席</td>
+            <td><%=link_to '着席',new_learning_time_path%></td>
+          </tr>
+            <%end%>
+          </table>
       <%end%>
-    </table>
-<%end%>
+    </div>
+  </div>
+</div>
