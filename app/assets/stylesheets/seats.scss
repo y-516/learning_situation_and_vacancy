@@ -7,7 +7,7 @@
 .seat_index{
   color:white;
   font-size: 2rem;
-  width:1300px;
+  width:auto;
   height:auto;
   text-align: center;
   font-weight: bold;
@@ -24,11 +24,18 @@
 }
 .index_table{
   text-align: center;
-  width:900px;
+  width:auto;
   font-weight: bold;
   border: solid 3px #000000;
   background-color: rgba(255,255,255,0.3);
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 50px;
+}
+.index_table th{
+  width:160px;
+  text-align: center;
+}
+.vacancy_table td{
+  width:160px;
 }

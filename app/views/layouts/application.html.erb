@@ -14,35 +14,37 @@
 
   </head>
   <body>
-    <header>
-      <nav>
-        <div class = "real_time">
-          <p id ="real_time"></p>
-        </div>
-        <div class = "header_url">
-          <% if user_signed_in?%>
-          <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
-          <%= link_to "座席状況一覧表示画面",seats_path %>
-          <%= link_to "全リーダー一覧画面",readers_path %>
-          <%= link_to "全学習者一覧画面",learners_path %>
-          <%= link_to "座席数入力画面",new_all_seat_path %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <%else%>
-          <%= link_to "新規登録", new_user_registration_path %>
-          <%= link_to "ログイン", new_user_session_path %>
-          <%end%>
-        </div>
-      </nav>
-      <p class="meg"><%=notice%></p>
-    </header>
+      <header>
+          <nav>
+            <div class = "real_time">
+              <p id ="real_time"></p>
+            </div>
+              <div class = "header_url" >
+                <% if user_signed_in?%>
+                  <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
+                  <%= link_to "座席状況一覧表示画面",seats_path %>
+                  <%= link_to "全リーダー一覧画面",readers_path %>
+                  <%= link_to "全学習者一覧画面",learners_path %>
+                  <%= link_to "座席数入力画面",new_all_seat_path %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  <%else%>
+                  <%= link_to "新規登録", new_user_registration_path %>
+                  <%= link_to "ログイン", new_user_session_path %>
+                <%end%>
+              </div>
+          </nav>
+        <p class="meg"><%=notice%></p>
+      </header>
 
-    <div class ="message">
-        <% if flash[:error].present? %>
-          <% flash[:error].each do |message| %>
-            <%= message%>
+
+      <div class ="message">
+          <% if flash[:error].present? %>
+            <% flash[:error].each do |message| %>
+              <%= message%>
+            <% end %>
           <% end %>
-        <% end %>
-    </div>
+      </div>
+      
     <%= yield %>
   </body>
 </html>

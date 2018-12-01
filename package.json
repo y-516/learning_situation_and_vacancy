@@ -2,6 +2,7 @@
   "name": "learning_situation_and_vacancy",
   "private": true,
   "dependencies": {
+    "bootstrap": "3",
     "easytimer.js": "^2.3.0",
     "jquery": "^3.3.1",
     "moment": "^2.22.2"

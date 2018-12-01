@@ -45,17 +45,19 @@
           <%end%>
         </table>
 
+<div class="vacancy_table">
+  <%if AllSeat.first.try(:number_of_seats)%>
+    <table>
+      <tr>
+        <%@vacancy.times do%>
+        <td>空席</td>
+        <td><%=link_to '着席',new_learning_time_path%></td>
+      </tr>
+        <%end%>
+      </table>
+  <%end%>
 
-      <%if AllSeat.first.try(:number_of_seats)%>
-        <table>
-          <tr>
-            <%@vacancy.times do%>
-            <td>空席</td>
-            <td><%=link_to '着席',new_learning_time_path%></td>
-          </tr>
-            <%end%>
-          </table>
-      <%end%>
+</div>
     </div>
   </div>
 </div>
