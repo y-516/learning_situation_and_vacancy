@@ -15,24 +15,36 @@
   </head>
   <body>
       <header>
-          <nav>
-            <div class = "real_time">
-              <p id ="real_time"></p>
+
+          <nav class="navbar">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                <span>■</span>
+              </button>
             </div>
-              <div class = "header_url" >
+
+            <div id="gnavi" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
                 <% if user_signed_in?%>
-                  <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
-                  <%= link_to "座席状況一覧表示画面",seats_path %>
-                  <%= link_to "全リーダー一覧画面",readers_path %>
-                  <%= link_to "全学習者一覧画面",learners_path %>
-                  <%= link_to "座席数入力画面",new_all_seat_path %>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  <li><%= link_to "ユーザープロフィール",user_path(current_user.id)%></li>
+                  <li><%= link_to "座席状況一覧表示画面",seats_path %></li>
+                  <li><%= link_to "全リーダー一覧画面",readers_path %></li>
+                  <li><%= link_to "全学習者一覧画面",learners_path %></li>
+                  <li><%= link_to "座席数入力画面",new_all_seat_path %></li>
+                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
                   <%else%>
-                  <%= link_to "新規登録", new_user_registration_path %>
-                  <%= link_to "ログイン", new_user_session_path %>
+                  <li><%= link_to "新規登録", new_user_registration_path %></li>
+                  <li><%= link_to "ログイン", new_user_session_path %></li>
                 <%end%>
-              </div>
+              </ul>
+            </div>
           </nav>
+
+
+
+
+
+
         <p class="meg"><%=notice%></p>
       </header>
 
@@ -44,7 +56,7 @@
             <% end %>
           <% end %>
       </div>
-      
+
     <%= yield %>
   </body>
 </html>

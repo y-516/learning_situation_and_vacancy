@@ -27,6 +27,7 @@ body{
   background-attachment: fixed;
   background-image:url('Screen-Shot.png');
 }
+
 header{
   margin-bottom: 50px;
   color:white;
@@ -51,10 +52,39 @@ header{
 }
 nav{
   font-size: 2rem;
-  height: 100px;
+  height: 100px; */
   position: relative;
-  /* background-color:red; */
 }
+
+/* @media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: yellow;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 4px;
+    display: block;
+  }
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 10px solid transparent;
+} */
+
 .real_time{
   color:white;
   height :90px;
