@@ -5,7 +5,7 @@ class Seat < ApplicationRecord
 
   def learning_done_check
     if learning_done < DateTime.now
-      errors.add(:学習終了予定時刻は,"過去の日付を使用できません")
+      errors.add(:learning_done,"は過去の日付を使用できません")
     end
   end
 end

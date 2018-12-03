@@ -35,8 +35,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'gon'
-gem 'momentjs-rails'
 gem "jquery-rails"
 gem 'rails_admin', '~> 1.3'
 gem 'cancancan', '~> 2.0'

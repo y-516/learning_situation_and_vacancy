@@ -12,16 +12,16 @@ Rails.application.routes.draw do
   end
 
 
-  resources :seats do
+  resources :seats,only:[:index,:destroy] do
     collection do
       get :top
     end
   end
 
-  resources :relationships
-  resources :readers
-  resources :learning_times
-  resources :learners
-  resources :users
-  resources :all_seats
+  resources :relationships,only:[:index,:show,:create,:destroy]
+  resources :readers,only:[:index,:show]
+  resources :learning_times,only:[:new,:index,:create]
+  resources :learners,only:[:index,:show]
+  resources :users,only:[:index,:show,:edit,:update]
+  resources :all_seats,only:[:new,:create,:destroy,:edit,:update]
 end

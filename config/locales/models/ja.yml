@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      seat: シート
     attributes:
       user:
         name: 名前
@@ -15,3 +16,5 @@ ja:
         position: 役職
         admin: 権限
         image: 画像
+      seat:
+        learning_done: 学習終了予定時刻
