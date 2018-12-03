@@ -10,12 +10,14 @@ class SeatsController < ApplicationController
       @all_seat = all_seat.number_of_seats.to_i
       @vacancy = @all_seat-@all_seat_count
       end
-
   end
 
   def destroy
     @seat = Seat.find(params[:id])
     @seat.destroy
     redirect_to seats_path,notice:"お疲れ様でした"
+  end
+
+  def top
   end
 end

@@ -7,12 +7,17 @@ Rails.application.routes.draw do
           root 'all_seats#new', as: :authenticated_root
     end
     unauthenticated do
-      root 'devise/sessions#new', as: :unauthenticated_root
+      root 'seats#top', as: :unauthenticated_root
     end
   end
 
 
-  resources :seats
+  resources :seats do
+    collection do
+      get :top
+    end
+  end
+
   resources :relationships
   resources :readers
   resources :learning_times
