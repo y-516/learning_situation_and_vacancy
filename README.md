@@ -27,7 +27,7 @@ Ruby on Rails 5.1.6
 ## カタログ設計
  <https://docs.google.com/spreadsheets/d/18D_A9ykGz5RmSLJcx0Pu7qoXvDgDNa_5FyKo-6OkU1A/edit?usp=sharing>
 ## テーブル定義
-<https://docs.google.com/spreadsheets/d/14EyJdUlNyTQlV2qL4VBPnFlRyxFX5048dP3Dxp5EsPo/edit?usp=sharing>
+https://docs.google.com/spreadsheets/d/1uDDoA1j09LThyOvBhebe7XZTTTJ0nhkkZWQJVCCNcYQ/edit?usp=sharing
 ## 画面遷移図
 <https://docs.google.com/spreadsheets/d/1n6UI_q4t8l4eQ8kqdAoutbU4Q56RhH4FgpLJECJ88is/edit?usp=sharing>
 ## 画面ワイヤーフレーム
