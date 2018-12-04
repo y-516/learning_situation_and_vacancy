@@ -4,9 +4,9 @@
     <table>
       <tr>
         <% @reader_all.each do |reader|%>
-        <td><%=reader.name%></td>
-        <td><%= link_to '詳細',reader_path(reader.id)%></td>
-        <td><%=image_tag reader.image%></td>
+          <td><%=reader.name%></td>
+          <td><%= link_to '詳細',reader_path(reader.id)%></td>
+          <td><%=image_tag reader.image%></td>
       </tr>
         <%end%>
     </table>

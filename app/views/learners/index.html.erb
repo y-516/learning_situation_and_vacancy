@@ -4,10 +4,10 @@
     <table>
       <tr>
         <% @learner_all.each do |learner|%>
-        <td><%= learner.name%></td>
-        <td><%=link_to '詳細',learner_path(learner.id)%></td>
-        <td><%= render 'follow_form', learner: learner %></td>
-        <td><%=image_tag learner.image%></td>
+          <td><%= learner.name%></td>
+          <td><%=link_to '詳細',learner_path(learner.id)%></td>
+          <td><%= render 'follow_form', learner: learner %></td>
+          <td><%=image_tag learner.image%></td>
       </tr>
         <%end%>
     </table>

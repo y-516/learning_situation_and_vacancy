@@ -4,9 +4,9 @@
     <table>
       <tr>
         <% @relationshop_user.each do |relationshop_user|%>
-        <td><%=relationshop_user.name%></td>
-        <td><%=link_to "詳細",relationship_path(relationshop_user.id)%></td>
-        <td><%=image_tag relationshop_user.image%></td>
+          <td><%=relationshop_user.name%></td>
+          <td><%=link_to "詳細",relationship_path(relationshop_user.id)%></td>
+          <td><%=image_tag relationshop_user.image%></td>
       </tr>
       <%end%>
     </table>
