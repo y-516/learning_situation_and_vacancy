@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-          root 'all_seats#new', as: :authenticated_root
+      root 'all_seats#new', as: :authenticated_root
     end
     unauthenticated do
       root 'seats#top', as: :unauthenticated_root

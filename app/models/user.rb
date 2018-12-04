@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
 
   has_many:active_relationships,foreign_key:'follower_id',class_name:'Relationship'
   has_many:passive_relationships,foreign_key:'followed_id',class_name:'Relationship'
@@ -17,17 +17,15 @@ class User < ApplicationRecord
   validates :ability,length:{ maximum: 255 }
   validates :project,length:{ maximum: 255 }
 
-
   def follow!(other_user)
-  active_relationships.create!(followed_id: other_user.id)
+    active_relationships.create!(followed_id: other_user.id)
   end
 
   def following?(other_user)
-  active_relationships.find_by(followed_id: other_user.id)
+    active_relationships.find_by(followed_id: other_user.id)
   end
 
   def unfollow!(other_user)
-  active_relationships.find_by(followed_id: other_user.id).destroy
+    active_relationships.find_by(followed_id: other_user.id).destroy
   end
-
 end

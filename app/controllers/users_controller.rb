@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-
   end
 
   private
@@ -29,8 +28,8 @@ class UsersController < ApplicationController
 
   def current_user_check
     if current_user.id != params[:id].to_i
-    flash[:notice] = "権限がありません"
-    redirect_to seats_path
+      flash[:notice] = "権限がありません"
+      redirect_to seats_path
     end
   end
 end

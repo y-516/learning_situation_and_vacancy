@@ -2,13 +2,13 @@
   <h1>全座席数入力画面</h1>
   <% if current_user.position == 1%>
     <% if AllSeat.first == nil%>
-      <%= render 'form' %>
+    <%= render 'form' %>
     <%end%>
     <% if AllSeat.first.try(:number_of_seats)%>
       <%= link_to '全座席数を変更する',edit_all_seat_path(AllSeat.first.id)%>
       <%= link_to '全座席数をリセットする',all_seat_path(AllSeat.first.id),method: :delete,data:{confirm:"座席数をリセットします。よろしいですか？"}%>
     <%end%>
-  <%else%>
-  <p>座席数は権限のあるユーザーが決定します</p>
+    <%else%>
+      <p>座席数は権限のあるユーザーが決定します</p>
   <%end%>
 </div>

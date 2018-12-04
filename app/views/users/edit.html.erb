@@ -1,10 +1,9 @@
 <div class="user_edit_error_msg">
   <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+  <li><%= msg %></li>
   <% end %>
 </div>
 <div class="user_edit_out">
-
   <%=form_with(model:@user,local:true) do |f|%>
   <%=f.label:名前%>
   <div class="input"><%=f.text_field:name%></div>
@@ -22,7 +21,6 @@
   <div class="input"><%=f.select:position,[['一般',0],['リーダー',1]]%></div>
   <%=f.label:画像%>
   <div class="input"><%=f.file_field:image%></div>
-
   <div class="input"><%=f.submit:プロフィールを更新%></div>
   <%end%>
 </div>

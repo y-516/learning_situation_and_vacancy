@@ -20,7 +20,7 @@ class AllSeatsController < ApplicationController
 
   def update
     @allseat.update(all_seat_params)
-     redirect_to new_all_seat_path, notice: "全座席数を変更しました"
+    redirect_to new_all_seat_path, notice: "全座席数を変更しました"
   end
 
   private

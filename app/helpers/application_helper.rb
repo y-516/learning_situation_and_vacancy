@@ -6,5 +6,4 @@ module ApplicationHelper
       return "リーダー"
     end
   end
-
 end
