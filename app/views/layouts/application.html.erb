@@ -15,16 +15,22 @@
   <header>
     <nav>
       <div class = "real_time">
-        <p id ="real_time"></p>
+        <span id ="real_time"></span>
       </div>
       <div class = "header_url" >
-        <% if user_signed_in?%>
-        <%= link_to "ユーザープロフィール",user_path(current_user.id)%>
-        <%= link_to "座席状況一覧表示画面",seats_path %>
-        <%= link_to "全リーダー一覧画面",readers_path %>
-        <%= link_to "全学習者一覧画面",learners_path %>
-        <%= link_to "座席数入力画面",new_all_seat_path %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <ul id ="menu">
+          <% if user_signed_in?%>
+          <li>menu
+            <ul class ="child">
+              <li><%= link_to "ユーザープロフィール",user_path(current_user.id)%></li>
+              <li><%= link_to "座席状況一覧表示画面",seats_path %></li>
+              <li><%= link_to "全リーダー一覧画面",readers_path %></li>
+              <li><%= link_to "全学習者一覧画面",learners_path %></li>
+              <li><%= link_to "座席数入力画面",new_all_seat_path %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
         <%else%>
         <%= link_to "トップ", top_seats_path %>
         <%= link_to "新規登録", new_user_registration_path %>
@@ -33,14 +39,15 @@
       </div>
     </nav>
     <p class="meg"><%=notice%></p>
+    <div class ="message">
+      <% if flash[:error].present? %>
+      <% flash[:error].each do |message| %>
+      <%= message%>
+      <% end %>
+      <% end %>
+    </div>
   </header>
-  <div class ="message">
-    <% if flash[:error].present? %>
-    <% flash[:error].each do |message| %>
-    <%= message%>
-    <% end %>
-    <% end %>
-  </div>
+
   <%= yield %>
   <footer>Dive into code 卒業課題</footer>
 </body>

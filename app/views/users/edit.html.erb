@@ -1,6 +1,8 @@
 <div class="user_edit_error_msg">
   <% @user.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
+  <ul>
+    <li><%= msg %></li>
+  </ul>
   <% end %>
 </div>
 <div class="user_edit_out">
