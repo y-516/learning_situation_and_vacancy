@@ -43,6 +43,13 @@
       </div>
     </div>
 
+    <div class="field">
+      <%= f.label :image%><br />
+      <div class="input">
+        <%= f.file_field :image, autofocus: true, autocomplete: "name"%>
+      </div>
+    </div>
+
     <div class="input">
       <%= f.submit "登録" %>
     </div>

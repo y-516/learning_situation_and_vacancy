@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :learning_goal,length:{ maximum: 255 }
   validates :ability,length:{ maximum: 255 }
   validates :project,length:{ maximum: 255 }
+  validates :image,presence:true
 
   def follow!(other_user)
     active_relationships.create!(followed_id: other_user.id)
