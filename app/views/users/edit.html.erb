@@ -6,6 +6,7 @@
   <% end %>
 </div>
 <div class="user_edit_out">
+  <h1>プロフィール編集画面</h1>
   <%=form_with(model:@user,local:true) do |f|%>
   <%=f.label:名前%>
   <div class="input"><%=f.text_field:name%></div>

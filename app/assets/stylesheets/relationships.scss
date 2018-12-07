@@ -1,7 +1,8 @@
 // Place all the styles related to the relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.relationshop_index_out{
+.relationship_index_out{
+  color:white;
   text-align: center;
   font-size: 2rem;
   width:auto;
@@ -13,7 +14,7 @@
   background-color: rgba(0,0,0,0.5);
   margin-bottom: 30px;
 }
-.relationshop_index_table{
+.relationship_index_table{
   text-align: center;
   height: 1100px;
   width:680px;
@@ -24,7 +25,7 @@
   margin-right:auto;
   margin-bottom: 50px;
 }
-.relationshop_index_table img{
+.relationship_index_table img{
   border-radius: 100px;
   height: 200px;
   width: 200px;
