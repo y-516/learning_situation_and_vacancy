@@ -38,6 +38,5 @@ class AllSeatsController < ApplicationController
 
   def set_all_seat
     @allseat = AllSeat.find(params[:id])
-    return @allseat
   end
 end

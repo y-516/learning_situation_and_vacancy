@@ -23,7 +23,7 @@
   <%=f.label:役職%>
   <div class="input"><%=f.select:position,[['一般',0],['リーダー',1]]%></div>
   <%=f.label:画像%>
-  <div class="input"><%=f.file_field:image%></div>
+  <div class="input" id ="img_name"><%=f.file_field:image%></div>
   <div class="input"><%=f.submit:プロフィールを更新%></div>
   <%end%>
 </div>
