@@ -111,13 +111,14 @@ nav {
 .input{
   color:black;
 }
-#img_name{
+input[type = file]{
+  padding: 5px;
+  margin:auto;
   color:white;
 }
 .field{
   padding: 7px;
 }
-
 footer{
   z-index: 10;
   position: absolute;
