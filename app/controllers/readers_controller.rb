@@ -4,6 +4,6 @@ class ReadersController < ApplicationController
   end
 
   def show
-    @reader_show=User.find(params[:id])
+    @reader_show = User.find(params[:id])
   end
 end

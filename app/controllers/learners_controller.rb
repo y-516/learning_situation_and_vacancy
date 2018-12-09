@@ -4,6 +4,6 @@ class LearnersController < ApplicationController
   end
 
   def show
-    @learner_show=User.find(params[:id])
+    @learner_show = User.find(params[:id])
   end
 end

@@ -37,9 +37,9 @@
     <p class="meg"><%=notice%></p>
     <div class ="message">
       <% if flash[:error].present? %>
-      <% flash[:error].each do |message| %>
-      <%= message%>
-      <% end %>
+        <% flash[:error].each do |message| %>
+          <%= message%>
+        <% end %>
       <% end %>
     </div>
   </header>

@@ -17,7 +17,7 @@ class AllSeatsController < ApplicationController
 
   def edit
   end
-
+  
   def update
     @allseat.update(all_seat_params)
     redirect_to new_all_seat_path, notice: "全座席数を変更しました"
@@ -31,9 +31,7 @@ class AllSeatsController < ApplicationController
 
   def leader_check
     leader_check = User.find(current_user.id)
-    if leader_check.position == 0
-      redirect_to seats_path,notice:"一般ユーザーは座席数を変更できません"
-    end
+    redirect_to seats_path,notice:"一般ユーザーは座席数を変更できません" if leader_check.position == 0
   end
 
   def set_all_seat

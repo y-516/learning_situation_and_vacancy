@@ -27,9 +27,6 @@ class UsersController < ApplicationController
   end
 
   def current_user_check
-    if current_user.id != params[:id].to_i
-      flash[:notice] = "権限がありません"
-      redirect_to seats_path
-    end
+      redirect_to seats_path,notice:"権限がありません" if current_user.id != params[:id].to_i
   end
 end
