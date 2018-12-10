@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :current_user_check,only: [:edit,:update]
+  before_action :referer_check,only: [:edit,:update]
   def index
   end
 
@@ -9,14 +9,23 @@ class UsersController < ApplicationController
 
   def edit
     @user =User.find(params[:id])
+    @current_user=User.find(current_user.id)
   end
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to user_path(current_user.id),notice:"プロフィールを編集しました"
+    if  @user.id == current_user.id
+      if @user.update(user_params)
+        redirect_to user_path(current_user.id),notice:"プロフィールを編集しました"
+      else
+        redirect_to user_path(current_user.id),notice:"更新失敗"
+      end
     else
-      render 'edit'
+      if @user.update(user_params)
+        redirect_to learners_path,notice:"#{@user.name}の役職を#{positioncolumn_change_number_to_string(@user.position)}にしました"
+      else
+        redirect_to user_path(current_user.id),notice:"更新失敗"
+      end
     end
   end
 
@@ -26,7 +35,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name,:email,:curriculum,:learning_goal,:ability,:project,:image,:image_cache,:position)
   end
 
-  def current_user_check
-      redirect_to seats_path,notice:"権限がありません" if current_user.id != params[:id].to_i
+  def referer_check
+    url_check = request.referer
+    if url_check.nil? then
+      redirect_to seats_path,notice:"URLの直打ちは禁止です"
+    end
   end
+
 end
