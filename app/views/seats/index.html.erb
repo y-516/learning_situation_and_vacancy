@@ -26,11 +26,7 @@
           <%end%>
           <td><%=student_under_study.user.name%></td>
           <td>
-            <%if student_under_study.user.position == 0 %>
-            一般
-            <%else%>
-            リーダー
-            <%end%>
+            <%=positioncolumn_change_number_to_string(student_under_study.user.position)%>
           </td>
           <td>
             <%if student_under_study.user.position == 0 %>

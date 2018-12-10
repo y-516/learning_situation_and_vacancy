@@ -15,10 +15,10 @@
   background-color: rgba(0,0,0,0.5);
   position: absolute;
   top: 0;
-  bottom: 100;
   left: 0;
   right: 0;
   margin: auto;
+  margin-bottom:80px;
 }
 .index_table{
   text-align: center;
@@ -30,14 +30,15 @@
   margin-right:auto;
   margin-bottom: 50px;
 }
-.index_table th{
-  width:160px;
+.index_table th,td{
+  padding: 15px;
   text-align: center;
 }
 .vacancy_table td{
-  width:160px;
+  width:110px;
+  paddig:15px;
+  text-align: center;
 }
-
 .seat_top_out{
   height: 100%;
   color: white;
