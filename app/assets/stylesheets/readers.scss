@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .reader_index_out{
-  margin-right:auto;
-  margin-left:auto;
-
   text-align: center;
 
   color:white;
@@ -15,15 +12,14 @@
   font-weight: bold;
 }
 .reader_index_table{
-  width:900px;
-  margin-right:auto;
-  margin-bottom: 50px;
-  margin-left:auto;
-
   text-align: center;
 }
+.reader_index_table table {
+  margin-right:auto;
+  margin-left:auto;
+}
 .reader_index_table td{
-  width: 300px;
+  padding: 30px;
 }
 .reader_index_table img{
   width: 200px;

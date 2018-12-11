@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181128010042) do
+ActiveRecord::Schema.define(version: 20181211085744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 20181128010042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
-    t.string "curriculum", default: "学習内容記入", null: false
-    t.string "learning_goal", default: "学習目標記入", null: false
-    t.string "ability", default: "得意分野記入", null: false
-    t.string "project", default: "稼働案件状況記入", null: false
+    t.string "curriculum", default: ""
+    t.string "learning_goal", default: ""
+    t.string "ability", default: ""
+    t.string "project", default: ""
     t.integer "position", default: 0
     t.boolean "admin", default: false, null: false
     t.text "image"

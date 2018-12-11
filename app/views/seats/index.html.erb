@@ -6,6 +6,7 @@
   <h2>空席数:<%=@all_seat-@all_seat_count%>席</h2>
   <%end%>
   <div class ="index_table">
+    <div class = "index_table_in">
     <table>
       <tr>
         <th>席状況</th>
@@ -47,7 +48,8 @@
           <td><%=link_to '着席',new_learning_time_path%></td>
         </tr>
         <%end%>
-      </table>
+        </table>
+      </div>
       <%end%>
     </div>
   </div>

@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .relationship_index_out{
-  margin-right:auto;
-  margin-left:auto;
-
   text-align: center;
 
   color:white;
@@ -15,15 +12,17 @@
   font-weight: bold;
 }
 .relationship_index_table{
-  width:800px;
-  margin-right:auto;
   margin-bottom: 50px;
-  margin-left:auto;
 
   text-align: center;
 }
+.relationship_index_table table{
+  margin-right:auto;
+  margin-left:auto;
+
+}
 .relationship_index_table td{
-  width: 400px;
+  padding:30px;
 }
 .relationship_index_table img{
   width: 200px;
@@ -32,11 +31,6 @@
   border-radius: 100px;
 }
 .relationship_show_out{
-  width:800px;
-  height:auto;
-  margin: auto;
-  margin-bottom:80px;
-
   text-align: center;
 
   color:white;

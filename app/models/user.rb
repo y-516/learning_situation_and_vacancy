@@ -12,10 +12,10 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   validates :name,presence:true,length: { maximum: 30 }
   validates :email ,length: { maximum: 255 }
-  validates :curriculum,presence:true,length:{ maximum: 255 }
-  validates :learning_goal,presence:true,length:{ maximum: 255 }
-  validates :ability,presence:true,length:{ maximum: 255 }
-  validates :project,presence:true,length:{ maximum: 255 }
+  validates :curriculum,length:{ maximum: 255 }
+  validates :learning_goal,length:{ maximum: 255 }
+  validates :ability,length:{ maximum: 255 }
+  validates :project,length:{ maximum: 255 }
 
   def follow!(other_user)
     active_relationships.create!(followed_id: other_user.id)

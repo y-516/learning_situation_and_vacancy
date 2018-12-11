@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .learnser_index_out{
-  margin-right:auto;
-  margin-left:auto;
-
   text-align: center;
 
   color:white;
@@ -14,15 +11,17 @@
   font-size: 2rem;
 }
 .learnser_index_table{
-  width:1100px;
-  margin-right:auto;
   margin-bottom: 50px;
-  margin-left:auto;
 
   text-align: center;
 }
+.learnser_index_table table{
+  margin-right:auto;
+  margin-left:auto;
+
+}
 .learnser_index_table td{
-  width: 200px;
+  padding: 30px;
 }
 .learnser_index_table img{
   width: 200px;
