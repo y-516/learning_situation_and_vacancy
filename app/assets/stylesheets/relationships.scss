@@ -2,55 +2,58 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .relationship_index_out{
-  color:white;
-  text-align: center;
-  font-size: 2rem;
-  width:auto;
-  height: auto;
-  margin-left:auto;
   margin-right:auto;
-  font-weight: bold;
+  margin-left:auto;
+
+  text-align: center;
+
+  color:white;
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
-  margin-bottom:80px;
+
+  font-size: 2rem;
+  font-weight: bold;
 }
 .relationship_index_table{
-  text-align: center;
-  height: auto;
   width:800px;
-  font-weight: bold;
-  border: solid 3px #000000;
-  background-color: rgba(255,255,255,0.3);
-  margin-left:auto;
   margin-right:auto;
   margin-bottom: 50px;
+  margin-left:auto;
+
+  text-align: center;
 }
 .relationship_index_table td{
-  padding: 30px;
+  width: 400px;
 }
 .relationship_index_table img{
-  border-radius: 100px;
-  height: 200px;
   width: 200px;
+  height: 200px;
+
+  border-radius: 100px;
 }
 .relationship_show_out{
-  color:white;
-  margin: auto;
-  font-size:1.5rem;
-  height:auto;
   width:800px;
+  height:auto;
+  margin: auto;
+  margin-bottom:80px;
+
   text-align: center;
-  font-weight: bold;
+
+  color:white;
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
-  margin-bottom:80px;
+
+  font-size:1.5rem;
+  font-weight: bold;
 }
 .relationship_show_out img{
-  border-radius: 100px;
-  height: 200px;
   width: 200px;
+  height: 200px;
+
+  border-radius: 100px;
 }
 p.relationship_show_word-wrap {
-  word-wrap: break-word;
   padding: 10px;
+
+  word-wrap: break-word;
 }

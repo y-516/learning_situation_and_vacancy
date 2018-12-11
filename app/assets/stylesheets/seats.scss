@@ -1,48 +1,46 @@
 // Place all the styles related to the seats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.seat_index_out{
-  position: relative;
-}
 .seat_index{
-  color:white;
-  font-size: 2rem;
-  width:auto;
-  height:auto;
   text-align: center;
-  font-weight: bold;
+
+  color:white;
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-bottom:80px;
+
+  font-size: 2rem;
+  font-weight: bold;
 }
 .index_table{
-  text-align: center;
-  width:auto;
-  font-weight: bold;
-  border: solid 3px #000000;
-  background-color: rgba(255,255,255,0.3);
-  margin-left:auto;
   margin-right:auto;
   margin-bottom: 50px;
+  margin-left:auto;
+
+  text-align: center;
+
+  border: solid 3px #000000;
+  background-color: rgba(255,255,255,0.3);
+
+  font-weight: bold;
 }
 .index_table th,td{
   padding: 15px;
+
   text-align: center;
 }
 .vacancy_table td{
   width:110px;
-  paddig:15px;
+
   text-align: center;
+
+  paddig:15px;
 }
 .seat_top_out{
   height: 100%;
-  color: white;
+
   text-align: center;
+
+  color: white;
   background-color: rgba(0,0,0,0.5);
 }
 .seat_top_in{

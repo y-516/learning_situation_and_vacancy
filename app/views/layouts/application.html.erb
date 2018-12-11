@@ -37,14 +37,15 @@
     <p class="meg"><%=notice%></p>
     <div class ="message">
       <% if flash[:error].present? %>
-        <% flash[:error].each do |message| %>
-          <%= message%>
-        <% end %>
+      <% flash[:error].each do |message| %>
+      <%= message%>
+      <% end %>
       <% end %>
     </div>
   </header>
 
   <%= yield %>
+  <div class="footer_area"></div>
   <footer>Dive into code 卒業課題</footer>
 </body>
 </html>
