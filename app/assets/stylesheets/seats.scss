@@ -13,23 +13,27 @@
 .headline_seat_index{
   width:400px;
 }
-.index_table_in{
-  width: auto;
-  margin-right:auto;
-  margin-left:auto;
+.seat_index table{
+  margin:auto;
+}
+.seat_index th{
+  text-align: center;
+  width:250px;
+}
+.seat_index td{
+  width:250px;
+}
+.vacancy_table table {
+  margin:auto;
+}
+.vacancy_table th {
+  text-align: center;
+  width:250px;
 
 }
-.index_table_in th,td{
-  padding: 15px;
+.vacancy_table td {
+  width:250px;
 
-  text-align: center;
-}
-.index_table_in td{
-  width:200px;
-
-  text-align: center;
-
-  paddig:15px;
 }
 .seat_top_out{
   height: 100%;
