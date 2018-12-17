@@ -6,7 +6,7 @@
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size: 2rem;
 }
@@ -19,8 +19,7 @@
   text-align: center;
 }
 .learner_index_table table{
-  margin-right:auto;
-  margin-left:auto;
+  margin:auto;
 
 }
 .learner_index_table td{
@@ -39,7 +38,7 @@
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
 
@@ -53,8 +52,19 @@
 
   border-radius: 100px;
 }
-p.learner_show_word-wrap{
-  padding: 10px;
+.learner_show_out table{
+  width:600px;
+  margin:auto;
+
+  table-layout: fixed;
+}
+.learner_show_out th{
+  width:170px;
+
+  text-align: center;
+}
+.learner_show_out td{
+  width:500px;
 
   word-wrap: break-word;
 }

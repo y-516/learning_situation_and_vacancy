@@ -6,7 +6,7 @@
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size: 2rem;
 }
@@ -34,7 +34,7 @@
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
 }
@@ -47,8 +47,20 @@
 
   border-radius: 100px;
 }
-p.reader_show_word-wrap{
-  padding: 10px;
+.reader_show_out table {
+  width:600px;
+  margin:auto;
+
+  table-layout: fixed;
+}
+.reader_show_out th{
+  width:170px;
+
+  text-align: center;
+}
+.reader_show_out td{
+  width:500px;
 
   word-wrap: break-word;
+
 }

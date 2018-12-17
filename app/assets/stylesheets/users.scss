@@ -6,17 +6,12 @@
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
 }
 .headline_user_show{
   width:500px;
-}
-span.user_show_word-wrap {
-  padding: 10px;
-
-  word-wrap: break-word;
 }
 .user_show_out img{
   width: 200px;
@@ -24,15 +19,25 @@ span.user_show_word-wrap {
 
   border-radius: 100px;
 }
-.user_show_out span{
-  padding:20px;
+.user_show_out table{
+  width:600px;
+  table-layout: fixed;
+  margin:auto;
+}
+.user_show_out table th{
+  width:170px;
+  text-align: center;
+}
+.user_show_out table td{
+  width:500px;
+  word-wrap: break-word;
 }
 .user_edit_out{
   text-align: center;
 
   color:white;
   border: solid 3px #000000;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
 }
@@ -47,7 +52,7 @@ span.user_show_word-wrap {
 
   text-align: center;
 
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
 }

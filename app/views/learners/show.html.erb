@@ -1,16 +1,30 @@
 <div class="learner_show_out">
   <h1 class="headline headline_learner_show">学習者詳細画面</h1>
   <p><%=image_tag @learner_show.image%></p>
-  <p>名前</p>
-  <p><%=@learner_show.name%></p>
-  <p>役職</p>
-  <p class="learner_show_word-wrap"><%=positioncolumn_change_number_to_string(@learner_show.position)%></p>
-  <p>学習内容</p>
-  <p class="learner_show_word-wrap"><%=@learner_show.curriculum%></p>
-  <p>学習目標</p>
-  <p class="learner_show_word-wrap"><%=@learner_show.learning_goal%></p>
-  <p>得意分野</p>
-  <p class="learner_show_word-wrap"><%=@learner_show.ability%></p>
-  <p>配属プロジェクト</p>
-  <p class="learner_show_word-wrap"><%=@learner_show.project%></p>
+  <table>
+    <tr>
+      <th>名前</th>
+      <td><%=@learner_show.name%></td>
+    </tr>
+    <tr>
+      <th>役職</th>
+      <td><%=positioncolumn_change_number_to_string(@learner_show.position)%></td>
+    </tr>
+    <tr>
+      <th>学習内容</th>
+      <td><%=@learner_show.curriculum%></td>
+    </tr>
+    <tr>
+      <th>学習目標</th>
+      <td><%=@learner_show.learning_goal%></td>
+    </tr>
+    <tr>
+      <th>得意分野</th>
+      <td><%=@learner_show.ability%></td>
+    </tr>
+    <tr>
+      <th>配属プロジェクト</th>
+      <td><%=@learner_show.project%></td>
+    </tr>
+  </table>
 </div>

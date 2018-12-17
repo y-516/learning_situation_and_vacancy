@@ -1,28 +1,44 @@
 <div class="user_show_out">
   <h1 class="headline headline_user_show">ユーザープロフィール画面</h1>
   <p><%=image_tag @current_user.image%></p>
-  <span>名前</span>
-  <span><%=@current_user.name%></span><br>
-  <span>役職</span>
-  <span class="user_show_word-wrap"><%=positioncolumn_change_number_to_string(@current_user.position)%></span><br>
-  <span>メール</span>
-  <span class="user_show_word-wrap"><%=@current_user.email%></span><br>
-  <%if @current_user.curriculum.present?%>
-  <span>学習内容</span>
-  <span class="user_show_word-wrap"><%=@current_user.curriculum%></span><br>
-  <%end%>
-  <%if @current_user.learning_goal.present?%>
-  <span>学習目標</span>
-  <span class="user_show_word-wrap"><%=@current_user.learning_goal%></span><br>
-  <%end%>
-  <%if @current_user.ability?%>
-  <span>得意分野</span>
-  <span class="user_show_word-wrap"><%=@current_user.ability%></span><br>
-  <%end%>
-  <%if @current_user.project?%>
-  <span>配属プロジェクト</span>
-  <span class="user_show_word-wrap"><%=@current_user.project%></span><br>
-  <%end%>
+  <table>
+    <tr>
+      <th>名前</th>
+      <td><%=@current_user.name%></td>
+    </tr>
+    <tr>
+      <th>役職</th>
+      <td><%=positioncolumn_change_number_to_string(@current_user.position)%></td>
+    </tr>
+    <tr>
+      <th>メール</th>
+      <td><%=@current_user.email%></td>
+    </tr>
+    <tr>
+      <%if @current_user.curriculum.present?%>
+      <th>学習内容</th>
+      <td><%=@current_user.curriculum%></td>
+      <%end%>
+    </tr>
+    <tr>
+      <%if @current_user.learning_goal.present?%>
+      <th>学習目標</th>
+      <td><%=@current_user.learning_goal%></td>
+      <%end%>
+    </tr>
+    <tr>
+      <%if @current_user.ability?%>
+      <th>得意分野</th>
+      <td><%=@current_user.ability%></td>
+      <%end%>
+    </tr>
+    <tr>
+      <%if @current_user.project?%>
+      <th>配属プロジェクト</th>
+      <td><%=@current_user.project%></td>
+      <%end%>
+    </tr>
+  </table>
   <p><%=link_to "#{@current_user.name}のフォロー中学習者一覧画面",relationships_path %></p>
   <%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%>
 </div>
