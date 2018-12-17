@@ -9,10 +9,9 @@
   background-color: rgba(0,0,0,0.5);
 
   font-size: 2rem;
-  font-weight: bold;
 }
-.reader_index_table{
-  text-align: center;
+.headline_reader_index{
+  width:380px;
 }
 .reader_index_table table {
   margin-right:auto;
@@ -37,8 +36,10 @@
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
 
-  font-size:1.5rem;
-  font-weight: bold;
+  font-size:2rem;
+}
+.headline_seat_show{
+  width:400px;
 }
 .reader_show_out img{
   width: 200px;

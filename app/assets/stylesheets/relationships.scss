@@ -9,7 +9,9 @@
   background-color: rgba(0,0,0,0.5);
 
   font-size: 2rem;
-  font-weight: bold;
+}
+.headline_relationship_index{
+  width:500px;
 }
 .relationship_index_table{
   margin-bottom: 50px;
@@ -37,8 +39,10 @@
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
 
-  font-size:1.5rem;
-  font-weight: bold;
+  font-size:2rem;
+}
+.headline_relationship_show{
+  width:420px;
 }
 .relationship_show_out img{
   width: 200px;

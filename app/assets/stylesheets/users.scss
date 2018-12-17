@@ -9,9 +9,11 @@
   background-color: rgba(0,0,0,0.5);
 
   font-size:2rem;
-  font-weight: bold;
 }
-p.user_show_word-wrap {
+.headline_user_show{
+  width:500px;
+}
+span.user_show_word-wrap {
   padding: 10px;
 
   word-wrap: break-word;
@@ -22,6 +24,9 @@ p.user_show_word-wrap {
 
   border-radius: 100px;
 }
+.user_show_out span{
+  padding:20px;
+}
 .user_edit_out{
   text-align: center;
 
@@ -29,8 +34,10 @@ p.user_show_word-wrap {
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
 
-  font-size:1.5rem;
-  font-weight: bold;
+  font-size:2rem;
+}
+.headline_user_edit{
+  width:420px;
 }
 .user_edit_out div{
   padding: 10px;

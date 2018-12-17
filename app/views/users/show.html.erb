@@ -1,20 +1,28 @@
 <div class="user_show_out">
-  <h1>ユーザープロフィール画面</h1>
+  <h1 class="headline headline_user_show">ユーザープロフィール画面</h1>
   <p><%=image_tag @current_user.image%></p>
-  <p>名前</p>
-  <p><%=@current_user.name%></p>
-  <p>役職</p>
-  <p class="user_show_word-wrap"><%=positioncolumn_change_number_to_string(@current_user.position)%></p>
-  <p>メール</p>
-  <p class="user_show_word-wrap"><%=@current_user.email%></p>
-  <p>学習内容</p>
-  <p class="user_show_word-wrap"><%=@current_user.curriculum%></p>
-  <p>学習目標</p>
-  <p class="user_show_word-wrap"><%=@current_user.learning_goal%></p>
-  <p>得意分野</p>
-  <p class="user_show_word-wrap"><%=@current_user.ability%></p>
-  <p>配属プロジェクト</p>
-  <p class="user_show_word-wrap"><%=@current_user.project%></p>
+  <span>名前</span>
+  <span><%=@current_user.name%></span><br>
+  <span>役職</span>
+  <span class="user_show_word-wrap"><%=positioncolumn_change_number_to_string(@current_user.position)%></span><br>
+  <span>メール</span>
+  <span class="user_show_word-wrap"><%=@current_user.email%></span><br>
+  <%if @current_user.curriculum.present?%>
+  <span>学習内容</span>
+  <span class="user_show_word-wrap"><%=@current_user.curriculum%></span><br>
+  <%end%>
+  <%if @current_user.learning_goal.present?%>
+  <span>学習目標</span>
+  <span class="user_show_word-wrap"><%=@current_user.learning_goal%></span><br>
+  <%end%>
+  <%if @current_user.ability?%>
+  <span>得意分野</span>
+  <span class="user_show_word-wrap"><%=@current_user.ability%></span><br>
+  <%end%>
+  <%if @current_user.project?%>
+  <span>配属プロジェクト</span>
+  <span class="user_show_word-wrap"><%=@current_user.project%></span><br>
+  <%end%>
   <p><%=link_to "#{@current_user.name}のフォロー中学習者一覧画面",relationships_path %></p>
-  <p><%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%></p>
+  <%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%>
 </div>

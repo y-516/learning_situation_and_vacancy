@@ -6,7 +6,7 @@
   <% end %>
 </div>
 <div class="user_edit_out">
-  <h1>プロフィール編集画面</h1>
+  <h1 class="headline headline_user_edit">プロフィール編集画面</h1>
   <%=form_with(model:@user,local:true) do |f|%>
   <%if @current_user.position == 0%>
   <%=f.label:名前%>

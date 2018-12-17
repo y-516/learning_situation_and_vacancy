@@ -5,7 +5,7 @@
   width:800px;
   height: 300px;
   margin-right:auto;
-  margin-bottom: 30px;
+  margin-bottom:30px;
   margin-left:auto;
 
   text-align: center;
@@ -14,8 +14,10 @@
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
 
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+}
+.headline_all_seat_new{
+  width:340px;
 }
 .all_seat_edit_out{
   width:800px;
@@ -30,6 +32,8 @@
   border: solid 3px #000000;
   background-color: rgba(0,0,0,0.5);
 
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+}
+.headline_all_seat_edit{
+  width:300px;
 }
