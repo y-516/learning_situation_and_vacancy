@@ -1,5 +1,5 @@
 class AllSeatsController < ApplicationController
-  before_action:leader_check,only:[:edit,:update]
+  before_action:leader_check,only:[:new,:edit,:update,:destory]
   before_action:set_all_seat,only:[:edit,:update,:destroy]
   def new
     @allseat = AllSeat.new
@@ -17,7 +17,7 @@ class AllSeatsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     @allseat.update(all_seat_params)
     redirect_to new_all_seat_path, notice: "全座席数を変更しました"

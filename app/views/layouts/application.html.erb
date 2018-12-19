@@ -22,7 +22,7 @@
               <li><%= link_to "座席状況一覧表示画面",seats_path %></li>
               <li><%= link_to "全リーダー一覧画面",readers_path %></li>
               <li><%= link_to "全学習者一覧画面",learners_path %></li>
-              <li><%= link_to "座席数入力画面",new_all_seat_path %></li>
+              <li><%= position_check_return_all_seats_new(current_user.id)%></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>
           </li>
