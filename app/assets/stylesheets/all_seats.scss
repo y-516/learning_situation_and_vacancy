@@ -4,9 +4,7 @@
 .all_seat_new_out{
   width:800px;
   height: 300px;
-  margin-right:auto;
-  margin-bottom:30px;
-  margin-left:auto;
+  margin:auto;
 
   text-align: center;
 
@@ -19,12 +17,19 @@
 .headline_all_seat_new{
   width:340px;
 }
+.all_seat_new_out_link{
+  padding-top:50px;
+
+  font-size:3rem;
+}
+.all_seat_new_out_link span{
+  padding:20px;
+}
 .all_seat_edit_out{
   width:800px;
   height: 300px;
-  margin-right:auto;
+  margin:auto;
   margin-bottom: 30px;
-  margin-left:auto;
 
   text-align: center;
 

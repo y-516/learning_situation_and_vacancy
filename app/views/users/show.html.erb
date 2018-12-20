@@ -1,6 +1,6 @@
 <div class="user_show_out">
   <h1 class="headline headline_user_show">ユーザープロフィール画面</h1>
-  <p><%=image_tag @current_user.image%></p>
+  <%=image_tag @current_user.image%>
   <table>
     <tr>
       <th>名前</th>
@@ -40,5 +40,5 @@
     </tr>
   </table>
   <p><%=link_to "#{@current_user.name}のフォロー中学習者一覧画面",relationships_path %></p>
-  <%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%>
+  <p><%=link_to "#{@current_user.name}のプロフィール編集" ,edit_user_path(@current_user.id)%></p>
 </div>

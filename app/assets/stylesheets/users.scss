@@ -21,15 +21,19 @@
 }
 .user_show_out table{
   width:600px;
-  table-layout: fixed;
   margin:auto;
+
+  table-layout: fixed;
 }
 .user_show_out table th{
-  width:170px;
+  width:190px;
+  padding: 15px;
+
   text-align: center;
 }
 .user_show_out table td{
   width:500px;
+
   word-wrap: break-word;
 }
 .user_edit_out{
@@ -40,6 +44,9 @@
   background-color: rgba(0,0,0,0.7);
 
   font-size:2rem;
+}
+.user_show_out p{
+  padding:10px;
 }
 .headline_user_edit{
   width:420px;

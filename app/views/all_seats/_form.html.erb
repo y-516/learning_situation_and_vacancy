@@ -1,9 +1,9 @@
 <%=form_with(model:@allseat ,local:true) do |f|%>
 <%= f.label:座席数%>
 <div class="input">
-  <%= f.number_field:number_of_seats,:min=>1%>
+  <p><%= f.number_field:number_of_seats,:min=>1%></p>
 </div>
 <div class="input">
-  <%= f.submit '登録'%>
+  <p><%= f.submit '登録'%></p>
 </div>
 <%end%>
