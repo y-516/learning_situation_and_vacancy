@@ -3,7 +3,7 @@
   <h2>学習終了予定時刻を入力すること</h2>
   <%=form_with(model:@seat , url: learning_times_path,local:true) do |f|%>
   <div class="input">
-    <p><%= f.datetime_select:learning_done,:minute_step => 15%></p>
+    <p><%= f.time_select:learning_done,:minute_step => 15%></p>
   </div>
   <div class="input">
     <p><%= f.submit '登録'%></p>

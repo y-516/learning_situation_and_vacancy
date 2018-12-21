@@ -4,6 +4,6 @@ class Seat < ApplicationRecord
   validate :learning_done_check
 
   def learning_done_check
-      errors.add(:learning_done,"は過去の日付を使用できません") if learning_done < DateTime.now
+      errors.add(:learning_done,"は過去の時間を使用できません") if learning_done < DateTime.now
   end
 end
