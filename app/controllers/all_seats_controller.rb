@@ -1,6 +1,7 @@
 class AllSeatsController < ApplicationController
   before_action:leader_check,only:[:new,:edit,:update,:destory]
   before_action:set_all_seat,only:[:edit,:update,:destroy]
+  
   def new
     @allseat = AllSeat.new
   end

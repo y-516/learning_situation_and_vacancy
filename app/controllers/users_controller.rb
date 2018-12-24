@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :referer_check,only: [:edit,:update]
+  
   def index
   end
 

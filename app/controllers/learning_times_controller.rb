@@ -1,5 +1,6 @@
 class LearningTimesController < ApplicationController
   before_action :seating_confirmation,only:[:new]
+  
   def new
     @seat =Seat.new
   end

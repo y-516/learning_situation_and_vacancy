@@ -1,5 +1,6 @@
 class SeatsController < ApplicationController
   require 'date'
+  
   def index
     @student_under_study = Seat.where("learning_done >= ?", DateTime.now).order('learning_done DESC')
     @time_up_learning_done = Seat.where("learning_done <= ?", DateTime.now)
