@@ -1,30 +1,30 @@
 <div class="reader_show_out">
   <h1 class="headline headline_seat_show">リーダー詳細表示画面</h1>
-  <p><%=image_tag @reader_show.image%></p>
+  <p><%= image_tag @reader_show.image%></p>
   <table>
     <tr>
       <th>名前</th>
-      <td><%=@reader_show.name%></td>
+      <td><%= @reader_show.name%></td>
     </tr>
     <tr>
       <th>役職</th>
-      <td><%=positioncolumn_change_number_to_string(@reader_show.position)%></td>
+      <td><%= positioncolumn_change_number_to_string(@reader_show.position)%></td>
     </tr>
     <tr>
       <th>学習内容</th>
-      <td><%=@reader_show.curriculum%></td>
+      <td><%= @reader_show.curriculum%></td>
     </tr>
     <tr>
       <th>学習目標</th>
-      <td><%=@reader_show.learning_goal%></td>
+      <td><%= @reader_show.learning_goal%></td>
     </tr>
     <tr>
       <th>得意分野</th>
-      <td><%=@reader_show.ability%></td>
+      <td><%= @reader_show.ability%></td>
     </tr>
     <tr>
       <th>配属プロジェクト</th>
-      <td><%=@reader_show.project%></td>
+      <td><%= @reader_show.project%></td>
     </tr>
   </table>
 </div>

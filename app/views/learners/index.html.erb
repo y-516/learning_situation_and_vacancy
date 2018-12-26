@@ -5,16 +5,16 @@
       <tr>
         <% @learner_all.each do |learner|%>
         <%if @current_user.position == 0%>
-        <td><%= learner.name%></td>
-        <td><%=link_to '詳細',learner_path(learner.id)%></td>
-        <td><%= render 'follow_form', learner: learner %></td>
-        <td><%=image_tag learner.image%></td>
+          <td><%= learner.name%></td>
+          <td><%= link_to '詳細', learner_path(learner.id)%></td>
+          <td><%= render 'follow_form', learner: learner %></td>
+          <td><%= image_tag learner.image%></td>
         <%else%>
-        <td><%=link_to '役職変更',edit_user_path(learner.id)%></td>
-        <td><%= learner.name%></td>
-        <td><%=link_to '詳細',learner_path(learner.id)%></td>
-        <td><%= render 'follow_form', learner: learner %></td>
-        <td><%=image_tag learner.image%></td>
+          <td><%= link_to '役職変更', edit_user_path(learner.id)%></td>
+          <td><%= learner.name%></td>
+          <td><%= link_to '詳細', learner_path(learner.id)%></td>
+          <td><%= render 'follow_form', learner: learner %></td>
+          <td><%= image_tag learner.image%></td>
         <%end%>
       </tr>
       <%end%>

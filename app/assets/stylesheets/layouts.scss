@@ -161,12 +161,15 @@ font-family:serif;
 }
 input[type = file]{
   margin:auto;
-  padding: 5px;
 
   color:white;
+
 }
 input[type = submit]{
   border-style: none;
+}
+label{
+  color:white;
 }
 .field{
   padding: 7px;

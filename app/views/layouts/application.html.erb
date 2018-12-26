@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>学習状況と空席確認アプリ</title>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
-  <header>
-    <nav>
-      <div class = "real_time">
-        <span id ="real_time"></span>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学習状況と空席確認アプリ</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class = "real_time">
+          <span id ="real_time"></span>
+        </div>
+        <div class = "header_url" >
+          <ul id ="menu">
+            <% if user_signed_in?%>
+            <li>各画面一覧
+              <ul class ="child">
+                <li><%= link_to "ユーザープロフィール", user_path(current_user.id)%></li>
+                <li><%= link_to "座席状況一覧表示画面", seats_path%></li>
+                <li><%= link_to "全リーダー一覧画面", readers_path%></li>
+                <li><%= link_to "全学習者一覧画面", learners_path%></li>
+                <li><%= position_check_return_all_seats_new(current_user.id)%></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          </ul>
+            <%else%>
+            <%= link_to "トップ", top_seats_path%>
+            <%= link_to "新規登録", new_user_registration_path%>
+            <%= link_to "ログイン", new_user_session_path%>
+            <%end%>
+        </div>
+      </nav>
+      <p class="meg"><%= notice%></p>
+      <div class="message">
+        <% if flash[:error].present? %>
+        <% flash[:error].each do |message| %>
+        <%= message%>
+        <% end %>
+        <% end %>
       </div>
-      <div class = "header_url" >
-        <ul id ="menu">
-          <% if user_signed_in?%>
-          <li>各画面一覧
-            <ul class ="child">
-              <li><%= link_to "ユーザープロフィール",user_path(current_user.id)%></li>
-              <li><%= link_to "座席状況一覧表示画面",seats_path %></li>
-              <li><%= link_to "全リーダー一覧画面",readers_path %></li>
-              <li><%= link_to "全学習者一覧画面",learners_path %></li>
-              <li><%= position_check_return_all_seats_new(current_user.id)%></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
-        </ul>
-        <%else%>
-        <%= link_to "トップ", top_seats_path %>
-        <%= link_to "新規登録", new_user_registration_path %>
-        <%= link_to "ログイン", new_user_session_path %>
-        <%end%>
-      </div>
-    </nav>
-    <p class="meg"><%=notice%></p>
-    <div class ="message">
-      <% if flash[:error].present? %>
-      <% flash[:error].each do |message| %>
-      <%= message%>
-      <% end %>
-      <% end %>
-    </div>
-  </header>
+    </header>
 
-  <%= yield %>
-  <div class="footer_area"></div>
-  <footer>Dive into code 卒業課題</footer>
-</body>
+    <%= yield %>
+    <div class="footer_area"></div>
+    <footer>Dive into code 卒業課題</footer>
+  </body>
 </html>

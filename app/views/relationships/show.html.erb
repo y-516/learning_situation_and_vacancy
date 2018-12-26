@@ -1,30 +1,30 @@
 <div class="relationship_show_out">
   <h1 class="headline headline_relationship_show">フォロー中学習者詳細</h1>
-  <p><%=image_tag @relationship_show.image%></p>
+  <p><%= image_tag @relationship_show.image%></p>
   <table>
     <tr>
       <th>名前</th>
-      <td><%=@relationship_show.name%></td>
+      <td><%= @relationship_show.name%></td>
     </tr>
     <tr>
       <th>役職</th>
-      <td><%=positioncolumn_change_number_to_string(@relationship_show.position)%></td>
+      <td><%= positioncolumn_change_number_to_string(@relationship_show.position)%></td>
     </tr>
     <tr>
       <th>学習内容</th>
-      <td><%=@relationship_show.curriculum%></td>
+      <td><%= @relationship_show.curriculum%></td>
     </tr>
     <tr>
       <th>学習目標</th>
-      <td><%=@relationship_show.learning_goal%></td>
+      <td><%= @relationship_show.learning_goal%></td>
     </tr>
     <tr>
       <th>得意分野</th>
-      <td><%=@relationship_show.ability%></td>
+      <td><%= @relationship_show.ability%></td>
     </tr>
     <tr>
       <th>配属プロジェクト</th>
-      <td><%=@relationship_show.project%></td>
+      <td><%= @relationship_show.project%></td>
     </tr>
   </table>
 </div>

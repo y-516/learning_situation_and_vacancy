@@ -1,10 +1,13 @@
 <div class="all_seat_new_out">
-    <h1 class="headline headline_all_seat_new">全座席数入力画面</h1>
-    <%= render 'form' if AllSeat.first == nil%>
+  <h1 class="headline headline_all_seat_new">全座席数入力画面</h1>
+  <%= render 'form' if AllSeat.first == nil%>
     <div class="all_seat_new_out_link">
       <% if AllSeat.first.try(:number_of_seats)%>
-        <span><%= link_to '全座席数を変更する',edit_all_seat_path(AllSeat.first.id)%></span>
-        <span><%= link_to '全座席数をリセットする',all_seat_path(AllSeat.first.id),method: :delete,data:{confirm:"座席数をリセットします。よろしいですか？"}%></span>
+        <span><%= link_to '全座席数を変更する', edit_all_seat_path(AllSeat.first.id)%></span>
+        <span><%= link_to '全座席数をリセットする',
+          all_seat_path(AllSeat.first.id),
+          method: :delete,
+          data: { confirm: "座席数をリセットします。よろしいですか？" }%></span>
       <%end%>
     </div>
 </div>

@@ -63,3 +63,21 @@
 
   font-size:2rem;
 }
+.user_edit_out .input{
+  color:black;
+  padding:10px;
+}
+.user_edit_out input[type = file]{
+  margin:auto;
+
+  color:white;
+
+}
+.user_edit_out input[type = submit]{
+  border-style: none;
+}
+.user_edit_out label{
+  color:white;
+  margin-right:20px;
+  width:200px;
+}
