@@ -7,89 +7,88 @@
 </div>
 <div class="user_edit_out">
   <h1 class="headline headline_user_edit">プロフィール編集画面</h1>
-  <%=form_with(model: @user,local: true) do |f|%>
+  <%= form_with(model: @user, local: true) do |f|%>
   <%if @current_user.position == 0%>
-  <ul>
-
-  <li class="input">
-    <%=f.label :名前%>
-    <%=f.text_field:name%>
-  </li>
-  <li class="input">
-    <%=f.label:メールアドレス%>
-    <%=f.text_field:email%>
-  </li>
-  <li class="input">
-    <%=f.label:学習内容%>
-    <%=f.text_area:curriculum,:placeholder => "(例) Ruby入門1"%>
-  </li>
-  <li class="input">
-    <%=f.label:学習目標%>
-    <%=f.text_area:learning_goal,:placeholder => "(例) Ruby入門2まで"%>
-  </li>
-  <li class="input">
-    <%=f.label:得意分野%>
-    <%=f.text_area:ability,:placeholder => "(例) HTML css歴1ヶ月"%>
-  </li>
-  <li class="input">
-    <%=f.label:配属プロジェクト%>
-    <%=f.text_area:project,:placeholder => "(例) テスター"%>
-  </li>
-  <li class="input" id ="img_name">
-    <%=f.label:画像%>
-    <%=f.file_field:image%>
-  </li>
-  <li class="input">
-    <%=f.submit:プロフィールを更新%>
-  </li>
-</ul>
+    <ul>
+      <li class="input">
+        <%= f.label :名前%>
+        <%= f.text_field :name%>
+      </li>
+      <li class="input">
+        <%= f.label :メールアドレス%>
+        <%= f.text_field :email%>
+      </li>
+      <li class="input">
+        <%= f.label :学習内容%>
+        <%= f.text_area :curriculum, :placeholder => "(例) Ruby入門1"%>
+      </li>
+      <li class="input">
+        <%= f.label :学習目標%>
+        <%= f.text_area :learning_goal, :placeholder => "(例) Ruby入門2まで"%>
+      </li>
+      <li class="input">
+        <%= f.label :得意分野%>
+        <%= f.text_area :ability, :placeholder => "(例) HTML css歴1ヶ月"%>
+      </li>
+      <li class="input">
+        <%= f.label :配属プロジェクト%>
+        <%= f.text_area :project, :placeholder => "(例) テスター"%>
+      </li>
+      <li class="input" id ="img_name">
+        <%= f.label :画像%>
+        <%= f.file_field :image%>
+      </li>
+      <li class="input">
+        <%= f.submit :プロフィールを更新%>
+      </li>
+    </ul>
   <%elsif @current_user.id == @user.id%>
-  <ul>
-    <li class="input">
-      <%=f.label:名前%>
-      <%=f.text_field:name%>
-    </li>
-    <li class="input">
-      <%=f.label:メールアドレス%>
-      <%=f.text_field:email%>
-    </li>
-    <li class="input">
-      <%=f.label:学習内容%>
-      <%=f.text_area:curriculum,:placeholder => "(例) Ruby入門1"%>
-    </li>
-    <li class="input">
-      <%=f.label:学習目標%>
-      <%=f.text_area:learning_goal,:placeholder => "(例) Ruby入門2まで"%>
-    </li>
-    <li class="input">
-      <%=f.label:得意分野%>
-      <%=f.text_area:ability,:placeholder => "(例) HTML css歴1ヶ月"%>
-    </li>
-    <li class="input">
-      <%=f.label:配属プロジェクト%>
-      <%=f.text_area:project,:placeholder => "(例) テスター"%>
-    </li>
-    <li class="input" id ="img_name">
-      <%=f.label:画像%>
-      <%=f.file_field:image%>
-    </li>
-    <li class="input">
-      <%=f.label:役職%>
-      <%=f.select:position,[['一般',0],['リーダー',1]]%>
-    </li>
-    <li class="input">
-      <%=f.submit:プロフィールを更新%>
-    </li>
-</ul>
+    <ul>
+      <li class="input">
+        <%= f.label :名前%>
+        <%= f.text_field :name%>
+      </li>
+      <li class="input">
+        <%= f.label :メールアドレス%>
+        <%= f.text_field :email%>
+      </li>
+      <li class="input">
+        <%= f.label :学習内容%>
+        <%= f.text_area :curriculum, :placeholder => "(例) Ruby入門1"%>
+      </li>
+      <li class="input">
+        <%= f.label :学習目標%>
+        <%= f.text_area :learning_goal, :placeholder => "(例) Ruby入門2まで"%>
+      </li>
+      <li class="input">
+        <%= f.label :得意分野%>
+        <%= f.text_area :ability, :placeholder => "(例) HTML css歴1ヶ月"%>
+      </li>
+      <li class="input">
+        <%= f.label :配属プロジェクト%>
+        <%= f.text_area :project, :placeholder => "(例) テスター"%>
+      </li>
+      <li class="input" id ="img_name">
+        <%= f.label :画像%>
+        <%= f.file_field :image%>
+      </li>
+      <li class="input">
+        <%= f.label :役職%>
+        <%= f.select :position, [['一般', 0], ['リーダー', 1]]%>
+      </li>
+      <li class="input">
+        <%= f.submit :プロフィールを更新%>
+      </li>
+    </ul>
   <%else%>
-  <h3><%=@user.name%>の役職を変更します</h3>
-  <div class="input">
-    <%=f.label:役職%>
-    <%=f.select:position,[['一般',0],['リーダー',1]]%>
-  </div>
-  <div class="input">
-    <%=f.submit:役職変更%>
-  </div>
+    <h3><%= @user.name%>の役職を変更します</h3>
+    <div class="input">
+      <%= f.label :役職%>
+      <%= f.select :position, [['一般', 0], ['リーダー', 1]]%>
+    </div>
+    <div class="input">
+      <%= f.submit :役職変更%>
+    </div>
   <%end%>
   <%end%>
 </div>
