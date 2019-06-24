@@ -64,5 +64,18 @@
   font-size:4rem;
 }
 .seat_top_in{
-  padding: 150px;
+  padding-top:150px;
 }
+  @media screen and (max-width:768px) {
+    .headline_seat_top {
+  }
+  .headline_seat_top {
+      width: auto;
+      font-size: 2.4rem;
+  }
+  .seat_top_in {
+    padding: 120px 10px 40px;
+    box-sizing: border-box;
+}
+
+  }
