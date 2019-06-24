@@ -233,3 +233,17 @@ ul.child li a{
 li a:hover{
   background-color: rgba(0,0,0,0.7);
 }
+.pc_only{
+  display: block;
+}
+.sp_only{
+  display: none;
+}
+  @media screen and (max-width:768px) {
+    .pc_only{
+      display: none;
+    }
+    .sp_only{
+      display: block;
+    }
+  }
