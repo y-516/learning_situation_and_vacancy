@@ -256,12 +256,16 @@ li.top_sp_menu {
     .sign_form {
       top: 5px;
       width: 310px;
-      height: 575px;
+      height: 470px;
     }
     .login_form{
       top:40px;
       width: 310px;
       height: 350px;
+    }
+    .field {
+      padding: 3px;
+      box-sizing: border-box;
     }
     h2{
       font-size:20px;
