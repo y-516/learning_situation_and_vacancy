@@ -264,3 +264,12 @@ li.top_sp_menu {
       height: auto;
   }
 }
+  @media screen and (max-width:320px){
+    div#error_explanation {
+      font-size: 11px;
+  }
+  .field {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
