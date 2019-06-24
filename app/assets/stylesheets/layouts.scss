@@ -69,8 +69,6 @@ nav {
 
   width :300px;
   height :38px;
-
-  background-color: rgba(0,0,0,0.7);
 }
 .header_url{
   position: absolute;
@@ -95,9 +93,6 @@ border-bottom: double 5px white;
 
 font-family:serif;
 
-}
-.headline_user_sign_up{
-  width:320px;
 }
 .headline_user_login{
   width:200px;
@@ -145,7 +140,9 @@ font-family:serif;
 
   width :400px;
   height: 585px;
-  margin: auto;
+  margin: 120px auto 100px;
+  padding:0 10px;
+  box-sizing: border-box;
 
   text-align: center;
 
@@ -157,16 +154,17 @@ font-family:serif;
   font-weight: bold;
 }
 .input{
-  color:black;
+  color:white;
+}
+input[type=submit] {
+  border-style: solid;
+  background-color: black;
 }
 input[type = file]{
   margin:auto;
 
   color:white;
 
-}
-input[type = submit]{
-  border-style: none;
 }
 label{
   color:white;
@@ -257,10 +255,10 @@ li.top_sp_menu {
     }
     .sign_form {
     top: 5px;
-    width: 345px;
+    width: 310px;
     height: 555px;
   }
   h2{
-    font-size:27px;
+    font-size:20px;
   }
 }
