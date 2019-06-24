@@ -233,6 +233,9 @@ ul.child li a{
 li a:hover{
   background-color: rgba(0,0,0,0.7);
 }
+li.top_sp_menu {
+  text-align: right;
+}
 .pc_only{
   display: block;
 }
@@ -246,4 +249,7 @@ li a:hover{
     .sp_only{
       display: block;
     }
+    nav {
+      font-size: 1.8rem;
+}
   }
