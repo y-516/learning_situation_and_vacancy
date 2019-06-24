@@ -10,3 +10,6 @@ document.addEventListener("turbolinks:load",(function(){
 $(function(){
 setTimeout("$('.meg').fadeOut('slow')", 1000)
 })
+$(function(){
+setTimeout("$('.message').fadeOut('slow')", 1000)
+})

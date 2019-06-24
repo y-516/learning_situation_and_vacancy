@@ -17,3 +17,11 @@
 .learning_times_new_out p{
   padding:20px;
 }
+
+@media screen and (max-width:768px){
+.learning_times_new_out {
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+  }
+}
