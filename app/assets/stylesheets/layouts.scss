@@ -25,6 +25,9 @@ header{
   color:white;
   background-color: rgba(0,0,0,0.7);
 }
+.tar{
+  text-align: right;
+}
 .alert {
   margin-bottom: 0px;
   padding: 0;
@@ -43,13 +46,10 @@ header{
   font-size: 2.5rem;
 }
 .meg{
-  margin-top: 10px;
-
   text-align: center;
 
   color:white;
-  background-color: rgba(0,0,0,0.7);
-
+  background-color: rgba(27, 209, 220, 0.7);
   font-size: 2.5rem;
 }
 nav {
@@ -294,7 +294,7 @@ li.top_sp_menu {
     padding: 15px 10px;
   }
   header{
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
   .seat_top_in p {
     font-size: 13px;

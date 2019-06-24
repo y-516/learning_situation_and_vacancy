@@ -17,7 +17,7 @@
         <div class = "header_url" >
           <ul id ="menu">
             <% if user_signed_in?%>
-            <li>各画面一覧
+            <li class="tar">各画面一覧
               <ul class ="child">
                 <li><%= link_to "ユーザープロフィール", user_path(current_user.id)%></li>
                 <li><%= link_to "座席状況一覧表示画面", seats_path%></li>
