@@ -257,7 +257,15 @@ li.top_sp_menu {
     }
     .login_background {
       height: 60vh;
-  }
+    }
+    .header_url {
+      bottom: 37px;
+      height: 34px;
+    }
+    header {
+      height: 80px;
+    }
+
 }
   @media screen and (max-width:420px) {
     .login_background {
@@ -273,6 +281,7 @@ li.top_sp_menu {
     font-size: 12px;
   }
   .sign_form {
+    top:0;
     height: 460px;
   }
 }
