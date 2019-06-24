@@ -76,6 +76,10 @@
   .seat_top_in {
     padding: 120px 10px 40px;
     box-sizing: border-box;
-}
-
   }
+}
+  @media screen and (max-width:420px){
+    .seat_top_out {
+      height: auto;
+  }
+}
