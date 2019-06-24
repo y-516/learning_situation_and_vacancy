@@ -139,11 +139,11 @@ font-family:serif;
   font-weight: bold;
 }
 .input{
-  color:white;
+  color:#333;
 }
 input[type=submit] {
   border-style: solid;
-  background-color: black;
+  background-color: white;
 }
 input[type = file]{
   margin:auto;
@@ -292,5 +292,8 @@ li.top_sp_menu {
   }
   header{
     margin-bottom: 0;
+  }
+  .seat_top_in p {
+    font-size: 13px;
   }
 }
