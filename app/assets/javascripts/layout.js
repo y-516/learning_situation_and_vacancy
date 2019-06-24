@@ -1,3 +1,4 @@
+// ドロップダウンメニュー
 document.addEventListener("turbolinks:load",(function(){
   $('#menu li').hover(function(){
       $("ul:not(:animated)", this).slideDown();
@@ -5,3 +6,7 @@ document.addEventListener("turbolinks:load",(function(){
       $("ul.child",this).slideUp();
   });
 }));
+// メッセージフェードアウト
+$(function(){
+setTimeout("$('.meg').fadeOut('slow')", 1000)
+})

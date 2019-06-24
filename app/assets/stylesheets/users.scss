@@ -118,5 +118,16 @@
   .user_show_out p {
     padding: 5px;
     font-size: 15px;
-}
   }
+  .user_edit_out {
+    font-size: 1.3rem;
+    padding:10px;
+    box-sizing: border-box;
+  }
+  .user_edit_out .input {
+    padding: 0px;
+  }
+  .headline_user_edit {
+    width: 100%;
+  }
+}
