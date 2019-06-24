@@ -26,7 +26,6 @@
 }
 .seat_index table{
   margin:auto;
-
 }
 .seat_index th{
   width:250px;
@@ -77,9 +76,57 @@
     padding: 40px 10px;
     box-sizing: border-box;
   }
+  .headline_seat_index {
+    width: auto;
+  }
+  .seat_index {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .seat_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
 }
-  @media screen and (max-width:420px){
+  .seat_index table {
+    margin: 10px 0;
+}
+.seat_index .seat_box th {
+    width: 0;
+    text-align: left;
+    border: 1px solid;
+    padding:0 5px;
+    box-sizing: border-box;
+}
+.seat_index .seat_box td {
+    width: 0;
+    text-align: left;
+    padding:0 5px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+.vacancy_table {
+    width: 90%;
+    margin: auto;
+}
+.vacancy_table td {
+  padding:0 3px;
+}
+.seat_index h1{
+    font-size: 1.4em;
+    padding:3px;
+    box-sizing: border-box;
+  }
+}
+  @media screen and (max-width:425px){
     .seat_top_out {
       height: auto;
   }
+  .seat_box {
+    justify-content: center;
+    width:100%;
+    max-width: 300px;
+}
 }

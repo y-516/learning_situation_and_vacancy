@@ -7,6 +7,7 @@
     <h2>空席数:<%= @all_seat - @all_seat_count%>席</h2>
   </div>
   <%end%>
+  <div class="pc_only">
     <table>
       <tr>
         <th>席状況</th>
@@ -42,6 +43,53 @@
       </tr>
       <%end%>
     </table>
+  </div>
+  <div class="sp_only seat_box">
+    <%@student_under_study.each do |student_under_study|%>
+    <table>
+      <tr>
+        <th>席状況</th>
+        <td>着席済み</td>
+      </tr>
+      <tr>
+        <th>着席/帰宅</th>
+        <%if current_user.id == student_under_study.user.id%>
+        <td><%= link_to '帰宅', seat_path(student_under_study.id),
+          method: :delete,
+          data: { confirm: "離席します。よろしいですか？" }%>
+        </td>
+        <%else%>
+        <td>着席中</td>
+        <%end%>
+      </tr>
+      <tr>
+        <th>名前</th>
+        <td><%= student_under_study.user.name%></td>
+      </tr>
+      <tr>
+        <th>役職</th>
+        <td>
+          <%= positioncolumn_change_number_to_string(student_under_study.user.position)%>
+        </td>
+      </tr>
+      <tr>
+        <th>詳細</th>
+        <td>
+          <%if student_under_study.user.position == 0 %>
+          <%= link_to '詳細', learner_path(student_under_study.user.id)%>
+          <%else%>
+          <%= link_to '詳細', reader_path(student_under_study.user.id)%>
+          <%end%>
+        </td>
+      </tr>
+      <tr>
+        <th>学習終了予定時刻</th>
+        <td><%= template_change_learning_done(student_under_study.learning_done)%></td>
+      </tr>
+      <%end%>
+    </table>
+  </div>
+
     <div class="vacancy_table">
       <%if AllSeat.first.try(:number_of_seats)%>
       <table>
