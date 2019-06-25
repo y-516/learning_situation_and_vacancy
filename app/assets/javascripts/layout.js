@@ -8,8 +8,8 @@ document.addEventListener("turbolinks:load",(function(){
 }));
 // メッセージフェードアウト
 $(function(){
-setTimeout("$('.meg').fadeOut('slow')", 1000)
+setTimeout("$('.meg').fadeOut('slow')", 2000)
 })
 $(function(){
-setTimeout("$('.message').fadeOut('slow')", 1000)
+setTimeout("$('.message').fadeOut('slow')", 2000)
 })

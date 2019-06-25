@@ -41,7 +41,7 @@ header{
   text-align: center;
 
   color:white;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(197, 0, 0, 0.7);
 
   font-size: 2.5rem;
 }
@@ -224,6 +224,9 @@ li a:hover{
 }
 li.top_sp_menu {
   text-align: right;
+}
+.btn-default {
+    margin: 15px auto;
 }
 .pc_only{
   display: block;
