@@ -42,3 +42,40 @@
 .headline_all_seat_edit{
   width:300px;
 }
+@media screen and (max-width:768px){
+  .all_seat_new_out {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .all_seat_new_out_link {
+    padding-top: 0;
+    font-size: 1.8rem;
+}
+  .all_seat_new_out_link span {
+      display: block;
+      padding: 0;
+      margin: 20px auto;
+  }
+  .headline_all_seat_new {
+    width: 100%;
+  }
+
+  .all_seat_edit_out {
+    width: 100%;
+    height: auto;
+    margin-bottom:0;
+    font-size: 2rem;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .headline_all_seat_edit {
+      width: 100%;
+  }
+  .all_seat_edit_out form{
+    font-size: 16px;
+  }
+  
+
+  }

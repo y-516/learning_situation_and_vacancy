@@ -69,3 +69,70 @@
 
   word-wrap: break-word;
 }
+td.learner_buttons span {
+  display: inline-block;
+  margin: 10px auto;
+}
+  @media screen and (max-width:768px){
+    .learner_index_table td {
+      padding: 5px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+    .learner_index_table img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .headline_learner_index {
+      width: 100%;
+    }
+    .learner_index_out {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .btn input[type="submit"] {
+      font-size: 10px;
+      width: 80px;
+      padding: 0;
+    }
+    .btn.btn-default {
+      display: flex;
+      justify-content: center;
+      width: 80px;
+    }
+    .headline_learner_show {
+      width: 100%;
+    }
+    .learner_show_out img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .learner_show_out table {
+      width: 100%;
+      font-size: 15px;
+    }
+    .learner_show_out{
+      padding:10px;
+      box-sizing: border-box;
+    }
+    .learner_show_out th {
+      width: 90px;
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid;
+    }
+    .learner_show_out td {
+      width: auto;
+      word-wrap: break-word;
+      border: 1px solid;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    .learner_name_width{
+      max-width: 100px;
+      word-wrap: break-word;
+    }
+
+  }

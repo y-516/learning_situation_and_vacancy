@@ -118,7 +118,7 @@ font-family:serif;
 }
 .sign_form{
   position: absolute;
-  top: 90px;
+  top: 5px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -264,6 +264,9 @@ li.top_sp_menu {
     h2{
       font-size:20px;
     }
+    h3 {
+      font-size: 18px;
+    }
     .login_background {
       height: 60vh;
     }
@@ -273,6 +276,12 @@ li.top_sp_menu {
     }
     header {
       height: 80px;
+    }
+    .meg{
+      font-size: 17px;
+    }
+    .message{
+      font-size: 17px;
     }
 
 }

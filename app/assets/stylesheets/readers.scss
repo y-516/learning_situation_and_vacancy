@@ -65,3 +65,51 @@
   word-wrap: break-word;
 
 }
+  @media screen and (max-width:768px){
+    .reader_index_table td {
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 15px;
+      max-width: 100px;
+      word-wrap: break-word;
+    }
+    .headline_reader_index {
+      width: 100%;
+    }
+    .reader_index_out {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .reader_index_table img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+    @media screen and (max-width:768px){
+      .reader_show_out table {
+        width: auto;
+        font-size: 15px;
+      }
+      .headline_seat_show {
+        width: 100%;
+      }
+      .reader_show_out img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .reader_show_out{
+        padding:10px;
+        box-sizing: border-box;
+      }
+      .reader_show_out th {
+        width: auto;
+        padding: 10px;
+        border: 1px solid;
+      }
+      .reader_show_out td{
+        width: auto;
+        border: 1px solid;
+      }
+  }

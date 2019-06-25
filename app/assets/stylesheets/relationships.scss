@@ -67,3 +67,45 @@
 
   word-wrap: break-word;
 }
+@media screen and (max-width:768px){
+  .headline_relationship_index {
+    width: 100%;
+  }
+  .relationship_index_table td {
+    padding: 5px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    max-width: 100px;
+    font-size: 16px;
+  }
+  .relationship_index_table img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .relationship_index_out {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .headline_relationship_show {
+    width: 100%;
+  }
+  .relationship_show_out table {
+    width: 100%;
+    font-size: 15px;
+  }
+  .relationship_show_out th {
+    width: auto;
+    padding: 5px;
+    border: 1px solid;
+  }
+  .relationship_show_out td {
+    width: auto;
+    border: 1px solid;
+  }
+  .relationship_show_out img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+}
