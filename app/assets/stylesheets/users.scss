@@ -47,6 +47,7 @@
 }
 .user_show_out p{
   padding:10px;
+  margin-top: 10px;
 }
 .headline_user_edit{
   width:420px;
@@ -76,6 +77,7 @@
 }
 .user_edit_out input[type = submit]{
   border-style: none;
+  padding:3px;
 }
 .user_edit_out label{
   width:200px;
@@ -126,6 +128,7 @@
   }
   .user_edit_out .input {
     padding: 5px 0;
+    margin: 5px auto;
   }
   .headline_user_edit {
     width: 100%;
