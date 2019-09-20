@@ -5,6 +5,16 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   skip_before_action :authenticate_user!, only: [:top]
   helper_method :positioncolumn_change_number_to_string
+  before_action :detect_devise_variant
+
+  def detect_devise_variant  # (1)と同じ名前
+      case request.user_agent
+      when /iPad/
+          request.variant = :tablet
+      when /iPhone/
+          request.variant = :mobile
+      end
+  end
 
   protected
 
@@ -23,5 +33,4 @@ class ApplicationController < ActionController::Base
       return "リーダー"
     end
   end
-
 end
