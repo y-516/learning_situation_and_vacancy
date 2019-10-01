@@ -27,6 +27,7 @@ gem 'chartkick'
 gem 'rails-i18n'
 gem 'faker'
 gem 'jquery-turbolinks'
+gem 'selenium-webdriver'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
